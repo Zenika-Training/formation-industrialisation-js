@@ -163,6 +163,9 @@ body {
 .reveal section img #questions {
   margin-top: 100px; }
 
+.reveal figcaption {
+  text-align: center; }
+
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
