@@ -1,0 +1,19 @@
+{
+  "name": "Industrialisation JS",
+  "version": "0.0.0",
+  "authors": [
+    "Hugo Wood <hx4.5@free.fr>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "55dceaaa0a6fa02f76384046ae1ba0d792d7f1ef"
+  }
+}
