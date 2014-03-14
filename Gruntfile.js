@@ -69,11 +69,11 @@ module.exports = function (grunt) {
                 tasks: 'assemble:content'
             },
             assets: {
-                files: '<%= copy.assets.cwd %>/<%= copy.assets.src %>',
+                files: '<%= copy.assets.cwd %><%= copy.assets.src %>',
                 tasks: 'copy:assets',
             },
             theme: {
-                files: '<%= copy.theme.cwd %>/<%= copy.theme.src %>',
+                files: '<%= copy.theme.cwd %><%= copy.theme.src %>',
                 tasks: 'copy:theme',
             },
             bower: {
