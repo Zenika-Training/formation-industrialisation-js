@@ -117,7 +117,8 @@ body {
   border: 1px solid #b30c37; 
   border-left: 5px solid #b30c37; }
 
-.reveal h2 + pre { /* Whole-slide code block */
+.reveal h2 + pre,
+.reveal h3 + pre { /* Whole-slide code block */
   border: none; }
 
 .reveal pre > code {
