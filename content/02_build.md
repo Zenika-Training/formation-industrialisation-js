@@ -44,5 +44,26 @@ MSBuild pour .net, Rake pour Ruby...
 
 
 
+## Grunt
+
+<figure>
+    <img src="assets/images/grunt-logo.png" alt="" />
+    <figcaption>The Javascript Task Runner</figcaption>
+</figure>
+
+
+
+## Grunt <small>Principes de fonctionnement</small>
+
+- Description des tâches dans un fichier `Gruntfile.js`
+    - Pur Javascript
+- Un exécutable en ligne de commande : `grunt tâches...`
+- De nombreux plugins apportent des tâches pré-définies
+    - Il n'y a plus qu'à configurer !
+- Possibilité de définir à volonté de nouvelles tâches en Javascript
+    - APIs pour manipuler les fichiers, le logging, le reporting...
+
+
+
 <!-- .slide: data-background="/assets/zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->
