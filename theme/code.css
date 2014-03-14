@@ -84,7 +84,7 @@ pre .attr_selector,
 pre .pseudo,
 pre .apache .cbracket,
 pre .tex .formula {
-  color: black;
+  color: #99BC0D;
 }
 
 pre .shebang,
@@ -94,7 +94,7 @@ pre .java .annotation,
 pre .template_comment,
 pre .pi,
 pre .doctype {
-  color: black;
+  color: #098458;
 }
 
 pre .coffeescript .javascript,
