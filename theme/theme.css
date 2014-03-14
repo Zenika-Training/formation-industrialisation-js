@@ -75,10 +75,7 @@ body {
   line-height: 130%; }
 
 .reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
+.reveal h3 {
   margin: 0 0 20px -40px;
   padding: 40px 0 40px 20px;
   background: #b30c37;
