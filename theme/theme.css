@@ -93,8 +93,11 @@ body {
   vertical-align: bottom; }
 
 /*********************************************
- * INLINE FORMATTING
+ * CONTENT
  *********************************************/
+.reveal li {
+  margin: 0.8em 0; }
+
 .reveal strong {
   color: #b30c37;
   font-style: italic;
