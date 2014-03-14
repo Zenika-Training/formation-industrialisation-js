@@ -86,7 +86,8 @@ body {
   font-weight: normal;
   letter-spacing: 0.02em; }
 
-.reveal h2 small {
+.reveal h2 small,
+.reveal h3 small {
   vertical-align: bottom; }
 
 /*********************************************
