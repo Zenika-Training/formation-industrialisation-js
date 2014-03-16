@@ -53,8 +53,9 @@ MSBuild pour .net, Rake pour Ruby...
 
 
 
-## Grunt <small>Principes de fonctionnement</small>
+## Principes de fonctionnement
 
+- Écrit en Javascript, il tourne sur NodeJS
 - Description des tâches dans un fichier `Gruntfile.js`
     - Pur Javascript
 - Un exécutable en ligne de commande : `grunt tâches...`
@@ -62,6 +63,76 @@ MSBuild pour .net, Rake pour Ruby...
     - Il n'y a plus qu'à configurer !
 - Possibilité de définir à volonté de nouvelles tâches en Javascript
     - APIs pour manipuler les fichiers, le logging, le reporting...
+
+
+
+## Installation
+
+- Installer [NodeJS](nodejs.org)
+- Installer l'exécutable : `npm install -g grunt-cli`
+- Grunt lui-même s'installe ensuite une fois par projet
+    - Permet de travailler avec des versions différentes
+    - `npm install grunt`
+
+
+
+## Syntaxe du Gruntfile
+
+<!-- Obligé d'indenter avec 2 espaces sinon retour à la ligne au niveau de
+'options'. Je n'ai pas trouvé pourquoi. -->
+
+```javascript
+module.exports = function(grunt) {
+  'use strict';
+
+  grunt.initConfig({
+    task1: {
+      options: { /*...*/ },
+      target1: {
+        src: '...',
+        dest: '...',
+      },
+      target2: { /*...*/ },
+    },
+    task2: { /*...*/ },
+  });
+  
+  // Charger des tâches externes
+  grunt.loadNpmTasks('task1');
+  grunt.loadTasks('task2');
+  // Déclarer une tâche composite
+  grunt.registerTask('default', ['task1:target2']);
+};
+```
+
+
+
+## Syntaxe du Gruntfile <small>Exemple</small>
+
+```javascript
+grunt.initConfig({
+  copy: {
+    assets: {
+      src: 'assets/**',
+      dest: 'target/',
+    },
+  },
+});
+  
+grunt.loadNpmTasks('grunt-contrib-copy');
+grunt.registerTask('default', ['copy']);
+```
+
+```dos
+$ ls
+assets    Gruntfile.js
+$ grunt
+Running "copy:assets" (copy) task
+Created 1 directories, copied 1 file
+Done, without errors.
+$ ls
+assets    Gruntfile.js    target
+```
 
 
 
