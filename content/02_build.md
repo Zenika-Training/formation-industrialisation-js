@@ -130,8 +130,8 @@ $ grunt
 Running "copy:assets" (copy) task
 Created 1 directories, copied 1 file
 Done, without errors.
-$ ls
-assets    Gruntfile.js    target
+$ ls target
+assets
 ```
 
 
