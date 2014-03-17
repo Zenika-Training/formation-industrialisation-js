@@ -57,12 +57,12 @@ MSBuild pour .net, Rake pour Ruby...
 
 - Écrit en Javascript, il tourne sur NodeJS
 - Description des tâches dans un fichier `Gruntfile.js`
-    - Pur Javascript
+  - Pur Javascript
 - Un exécutable en ligne de commande : `grunt tâches...`
 - De nombreux plugins apportent des tâches pré-définies
-    - Il n'y a plus qu'à configurer !
+  - Il n'y a plus qu'à configurer !
 - Possibilité de définir à volonté de nouvelles tâches en Javascript
-    - APIs pour manipuler les fichiers, le logging, le reporting...
+  - APIs pour manipuler les fichiers, le logging, le reporting...
 
 
 
@@ -71,8 +71,8 @@ MSBuild pour .net, Rake pour Ruby...
 - Installer [NodeJS](nodejs.org)
 - Installer l'exécutable : `npm install -g grunt-cli`
 - Grunt lui-même s'installe ensuite une fois par projet
-    - Permet de travailler avec des versions différentes
-    - `npm install grunt`
+  - Permet de travailler avec des versions différentes
+  - `npm install grunt`
 
 
 
