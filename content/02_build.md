@@ -68,7 +68,7 @@ MSBuild pour .net, Rake pour Ruby...
 
 ## Installation
 
-- Installer [NodeJS](nodejs.org)
+- Installer [NodeJS](http://nodejs.org)
 - Installer l'exécutable : `npm install -g grunt-cli`
 - Grunt lui-même s'installe ensuite une fois par projet
   - Permet de travailler avec des versions différentes
