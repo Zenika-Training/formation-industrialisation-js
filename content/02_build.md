@@ -150,5 +150,31 @@ assets
 
 
 
+## Plugins
+
+- Grunt n'embarque aucune tâche prédéfinie
+- Ces tâches sont disponibles sous forme de plugins
+  - 25 sont maintenus par l'équipe Grunt :
+  [`grunt-contrib-*`](https://github.com/gruntjs/grunt-contrib)
+  - Des dizaines d'autres par la communauté
+- Installation :
+  - `npm install <plugin>`
+  - `grunt.loadNpmTasks('<plugin>')`
+
+
+
+## Plugins <small>Exemples</small>
+
+- Concaténer : `grunt-contrib-concat`
+- Minifier : `grunt-contrib-uglify`
+- Compiler du Sass : `grunt-contrib-sass`
+- Optimiser des images : `grunt-contrib-imagemin`
+- Extraire de la documentation JSDoc : `grunt-jsdoc`
+- Lancer des tests Jasmine : `grunt-contrib-jasmine`
+- Déployer en FTP : `grunt-ftp-deploy`
+- ...
+
+
+
 <!-- .slide: data-background="/assets/zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->
