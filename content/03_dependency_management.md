@@ -146,5 +146,23 @@ le `bower.json`
 
 
 
+## Intégration Bower / Grunt
+
+- On peut consommer les packages Bower simplement en référençant leur contenu
+dans une page HTML
+```html
+<link href="bower_components/bootstrap/dist/bootstrap.css">
+```
+&#8658; <!-- fat right arrow --> Contraint d'embarquer `bower_components` en
+production alors que tous les fichiers ne sont pas forcément utilisés
+
+- Solution : utiliser Grunt pour lancer `bower install` puis copier les
+fichiers dans le répertoire de build
+  - Plusieurs plugins de la communauté sont disponibles (fonctionnalités et
+  maturité diverses) : `grunt-bower`, `grunt-bowercopy`, `grunt-bower-task`
+  - On peut aussi le faire avec `grunt-contrib-copy`
+
+
+
 <!-- .slide: data-background="/assets/zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->
