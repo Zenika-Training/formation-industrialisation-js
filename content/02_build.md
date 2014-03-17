@@ -107,14 +107,28 @@ module.exports = function(grunt) {
 
 
 
+## Syntaxe du Gruntfile
+
+- Une *tâche* est un objet contenant :
+  - 1 ou plusieurs cibles
+  - 0 ou 1 objet `options` qui valorise les options par défaut pour toutes les
+  cibles
+- Une *cible* est un objet contenant :
+  - 0 ou 1 objet `options` qui surcharge les options de la tâche
+  pour cette cible seulement
+  - des paramètres (en général des chemins source et destination)
+- Les options ne sont jamais obligatoires, les paramètres peuvent l'être ou non
+
+
+
 ## Syntaxe du Gruntfile <small>Exemple</small>
 
 ```javascript
 grunt.initConfig({
-  copy: {
-    assets: {
-      src: 'assets/**',
-      dest: 'target/',
+  copy: {  // tâche
+    assets: {  // cible
+      src: 'assets/**',  // paramètre
+      dest: 'target/',  // paramètre
     },
   },
 });
