@@ -47,7 +47,7 @@ MSBuild pour .net, Rake pour Ruby...
 ## Grunt
 
 <figure>
-    <img src="assets/images/grunt-logo.png" alt="" />
+    <img src="assets/images/grunt-logo.png" alt="Grunt logo"  width="40%"/>
     <figcaption>The Javascript Task Runner</figcaption>
 </figure>
 
