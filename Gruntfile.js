@@ -65,7 +65,7 @@ module.exports = function (grunt) {
                 livereload: true,
             },
             content: {
-                files: '<%= assemble.content.src %>',
+                files: ['index.hbs', '<%= assemble.content.src %>'],
                 tasks: 'assemble:content'
             },
             assets: {
