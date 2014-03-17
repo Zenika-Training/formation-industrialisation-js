@@ -1,0 +1,150 @@
+# Gestion<br/>des dépendances
+
+<!-- .slide: data-background="/assets/zenika/images/title-background.png" -->
+
+
+
+## Plan
+
+- Build et génération du livrable
+- **Gestion des dépendances**
+- Tests et qualimétrie
+- Productivité
+- Intégration continue
+- Debugging et optimisation
+
+
+
+## Motivation
+
+- Facilité d'installation des dépendances
+- Pas de dépendances en GCL
+- Gestion des dépendances transitives
+
+
+
+## NPM
+
+<figure style="margin-top: 20%">
+    <img src="assets/images/npm-logo.png" alt="NPM logo"  width="40%"/>
+    <figcaption>The Node Package Manager</figcaption>
+</figure>
+
+
+
+## NPM <small>Node Package Manager</small>
+
+- http://npmjs.org
+- Livré avec [NodeJS](http://nodejs.org)
+- ~64k packages pour la plate-forme Node
+  - pas pour le Javascript côté client
+  - mais utile pour les outils de développement (Grunt...)
+- Description des dépendances dans un fichier `package.json`
+  - Différenciation des dépendances de développement (build, test) et des
+  dépendances de production
+- Stockage dans un dossier `node_modules`, *un par projet*
+
+
+
+## Syntaxe du package.json
+
+```json
+{
+  "name": "formation-zenika-industrialisation-web-et-javascript",
+  "version": "1.0.0",
+  "author": "Zenika",
+  "devDependencies": {
+    "grunt": "~0.4.4" // au moins 0.4.4, mais pas 0.5 ou plus
+  },
+  "dependencies": {
+    "async": "0.2.x",
+    "underscore": "^1.6.0" // au moins 1.6.0, mais pas 2.0 ou plus
+  }
+}
+```
+
+- Les versions doivent suivre le [Semantic Versioning 2.0](http://semver.org/)
+  - version = major.minor.patch-anything
+
+
+
+## Commandes
+
+- `npm init` crée un `package.json` interactivement
+- `npm install` installe toutes les dépendances si un `package.json` est
+présent
+- L'option `--save` de `npm install` enregistre la dépendance
+  - Idem pour les dépendances de développement avec `--save-dev`
+  - La version peut être spécifiée : `npm install <package>@<version>`
+- Recherche : `npm search <term>`
+
+
+
+## Côté client
+
+- Rappel : NPM installe des packages pour NodeJS, pas des librairies pour le
+développement dans le navigateur
+- Il faut donc un autre programme pour cela...
+
+
+
+## Bower
+
+<figure>
+    <img src="assets/images/bower-logo.png" alt="Bower logo"  width="40%"/>
+    <figcaption>A package manager for the web</figcaption>
+</figure>
+
+
+
+## Bower
+
+- http://bower.io
+- Basé sur Git, développé par Twitter
+- Tourne sur [NodeJS](http://nodejs.org) : `npm install -g bower`
+- ~10k packages dans l'index
+  - mais possible d'utiliser n'importe quel dépôt Git ou SVN comme source pour
+  d'autres packages
+- Description des dépendances dans un fichier `bower.json`
+  - Différenciation des dépendances de développement (build, test) et des
+  dépendances de production
+- Stockage dans un dossier `bower_components`, *un par projet*
+
+
+
+## Syntaxe du bower.json
+
+```json
+{
+  "name": "formation-zenika-industrialisation-web-et-javascript",
+  "version": "1.0.0",
+  "devDependencies": {
+    "underscore": "^1.6.0"
+  },
+  "dependencies": {
+    "angular": "~1.2.10"
+  }
+}
+```
+
+- Les versions doivent suivre le [Semantic Versioning 2.0](http://semver.org/)
+  - version = major.minor.patch-anything
+- ou être une référence Git : commit, tag, branche
+
+
+
+## Commandes
+
+- `bower init` crée un `bower.json` interactivement
+- `bower install` installe toutes les dépendances si un fichier `bower.json`
+est présent
+- L'option `--save` de `bower install <package>` enregistre la dépendance dans
+le `bower.json`
+  - Idem pour les dépendances de développement avec `--save-dev`
+  - La version peut être spécifiée : `bower install <package>#<version>`
+- Recherche : `bower search <term>`
+
+
+
+<!-- .slide: data-background="/assets/zenika/images/questions.png" -->
+<!-- .slide: data-background-size="30%" -->
