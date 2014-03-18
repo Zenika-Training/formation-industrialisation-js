@@ -130,5 +130,68 @@ describe('a parrot', function() {
 
 
 
+## Tests bout-en-bout
+
+<figure>
+    <img src="assets/images/angular-logo.png" alt="Angular logo"  width="45%"/>
+    <figcaption>Protractor: E2E test framework for Angular apps</figcaption>
+</figure>
+
+
+
+## Protractor
+
+- Créé par l'équipe AngularJS
+- Tourne sur Node
+- Basé sur Selenium
+  - Tests par automation du navigateur
+  - Nécessite un serveur Selenium
+  - Reprend le style de l'API Selenium en ajoutant des spécificités Angular
+- API pour les tests : Jasmine ou Mocha
+
+
+
+## Mise en route
+
+- `npm install -g protractor`
+- `webdriver-manager update` + `webdriver-manager start` pour installer et
+lancer un serveur Selenium
+- `protractor conf.js`
+
+```javascript
+exports.config = {
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  capabilities: {
+    'browserName': 'firefox'
+  },
+  specs: ['spec.js'],
+};
+```
+
+
+
+## Exemple de test
+
+```javascript
+describe('angularjs homepage', function() {
+
+  it('should greet the named user', function() {
+    browser.get('http://www.angularjs.org');
+
+    // Cherche les input avec ng-model=yourName
+    element(by.model('yourName')).sendKeys('Zenika');
+
+    // Cherche les éléments bindés à yourName
+    // Exemple : <h1>Hello \{{yourName}}</h1>
+    var greeting = element(by.binding('yourName'));
+
+    expect(greeting.getText()).toEqual('Hello Zenika!');
+  });
+
+});
+```
+
+
+
 <!-- .slide: data-background="/assets/zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->
