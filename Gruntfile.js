@@ -93,7 +93,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-assemble');
     grunt.loadNpmTasks('grunt-bowercopy');
-    grunt.registerTask('design', ['default', 'connect:server', 'watch']);
     grunt.registerTask('default', ['bowercopy', 'assemble', 'copy']);
+    grunt.registerTask('design', ['default', 'connect:server', 'watch']);
+    grunt.registerTask('view', ['default', 'connect:keepalive']);
 
 };
