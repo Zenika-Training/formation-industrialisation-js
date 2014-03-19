@@ -6,7 +6,7 @@
 
 ## Plan
 
-<!-- .slide: id="toc" -->
+<!-- .slide: id="master-toc" class="toc" -->
 
 - [Build et génération du livrable](#/1)
 - [Gestion des dépendances](#/2)

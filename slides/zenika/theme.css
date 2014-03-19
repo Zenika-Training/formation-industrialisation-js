@@ -147,7 +147,7 @@ body {
   color: white;
   background: #b30c37; }
 
-.reveal .slides #toc a {
+.reveal .slides .toc a {
   color: inherit; }
 
 /*********************************************

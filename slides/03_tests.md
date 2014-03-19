@@ -6,12 +6,14 @@
 
 ## Plan
 
-- Build et génération du livrable
-- Gestion des dépendances
-- **Tests et qualimétrie**
-- Productivité
-- Intégration continue
-- Debugging et optimisation
+<!-- .slide: class="toc" -->
+
+- [Build et génération du livrable](#/1)
+- [Gestion des dépendances](#/2)
+- **[Tests et qualimétrie](#/3)**
+- [Productivité](#/4)
+- [Intégration continue](#/5)
+- [Debugging et optimisation](#/6)
 
 
 
