@@ -1,8 +1,5 @@
-# How to view the slides
+# Comment visualiser les slides
 
-- if don't already have the [Grunt CLI](http://gruntjs.com), 
-`npm install -g grunt-cli`
-- if don't already have [Bower](http://bower.io), `npm install -g bower`
-- `npm install`
-- `grunt view`
-- navigate to http://localhost:8000
+- démarrer un serveur web sur le dossier `slides`
+- naviguer sur ce serveur
+- sélectionner la page HTML correspondant au chapitre voulu

@@ -1,6 +1,6 @@
 # Build</br>Génération du livrable
 
-<!-- .slide: data-background="/assets/zenika/images/title-background.png" -->
+<!-- .slide: data-background="zenika/images/title-background.png" -->
 
 
 
@@ -176,5 +176,5 @@ assets
 
 
 
-<!-- .slide: data-background="/assets/zenika/images/questions.png" -->
+<!-- .slide: data-background="zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->

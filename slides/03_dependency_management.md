@@ -1,6 +1,6 @@
 # Gestion<br/>des dépendances
 
-<!-- .slide: data-background="/assets/zenika/images/title-background.png" -->
+<!-- .slide: data-background="zenika/images/title-background.png" -->
 
 
 
@@ -164,5 +164,5 @@ fichiers dans le répertoire de build
 
 
 
-<!-- .slide: data-background="/assets/zenika/images/questions.png" -->
+<!-- .slide: data-background="zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->

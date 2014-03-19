@@ -45,7 +45,7 @@ body {
   height: 650px; }
 
 .reveal .slides h2:after {
-  content: url("/assets/zenika/images/zenika-logo-small.png");
+  content: url("images/zenika-logo-small.png");
   float: right;
   margin-top: -14px;
   margin-right: 20px;
