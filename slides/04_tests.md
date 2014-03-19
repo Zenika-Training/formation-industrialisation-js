@@ -93,7 +93,7 @@ describe('a parrot', function() {
     spyOn(sut, 'onTold'); 
   });
 
-  it("repeats what it's told", function () {
+  it("can be spied on", function () {
     sut.onTold(message);
     expect(sut.onTold).toHaveBeenCalledWith(message);
   });
@@ -110,9 +110,9 @@ describe('a parrot', function() {
   - Ouvrir la page dans le navigateur de référence
   - Une telle page est fourni avec Jasmine, il faut simplement modifier les 
   `script[src]`
-- Dans Node, à l'aide du projet `jasmine-node`
+- Dans Node, à l'aide du projet `jasmine-node` (Jasmine 1.3)
   - `npm install -g jasmine-node`
-  - `jasmine-node <dossier de tests>`
+  - `jasmine-node <fichiers/dossiers de tests>`
 
 
 
@@ -127,6 +127,68 @@ describe('a parrot', function() {
   - API standard xUnit
   - Conçu pour les navigateurs, peut fonctionner sous Node avec à l'aide de
   projets tierce-partie
+
+
+
+## Automatisation des tests unitaires
+
+<figure>
+    <img 
+      src="assets/images/karma-logo.png" 
+      alt="Karma logo"  
+      width="60%"
+      style="margin-top: 20%"/>
+    <figcaption>Spectacular Test Runner for Javascript</figcaption>
+</figure>
+
+
+
+## Karma
+
+- Créé par l'équipe AngularJS
+- Tourne sur Node
+- Il exécute atuomatiquement les tests
+  - dans plusieurs navigateurs
+  - à chaque modification du code
+- Indépendant du framework de test
+  - Compatible Jasmine, Mocha, QUnit et autres
+
+
+
+## Installation
+- `npm install -g karma-cli`
+- `npm install karma` + les plugins voulus
+  - `karma-jasmine`
+  - `karma-firefox-launcher`
+  - ...
+- `karma init` crée un fichier de configuration `karma.conf.js` interactivement
+- `karma start` lance Karma en continue
+  - ajouter l'option `--single-run` pour passer les tests une fois
+
+
+
+## Exemple de karma.conf.js
+
+```javascript
+module.exports = function(config) {
+  config.set({
+    frameworks: ['jasmine'], 
+
+    files: [ // Inclus le code à tester
+      'src/*.js',
+      'test/*.js',
+    ],
+
+    browsers: ['Chrome', 'Firefox'],
+
+    // Relancer les tests à chaque modification d'un fichier
+    autoWatch: true, 
+
+    // Une seule passe de test
+    singleRun: false,
+  });
+};
+```
 
 
 
@@ -156,7 +218,7 @@ describe('a parrot', function() {
 - `npm install -g protractor`
 - `webdriver-manager update` + `webdriver-manager start` pour installer et
 lancer un serveur Selenium
-- `protractor conf.js`
+- `protractor protractor.conf.js`
 
 ```javascript
 exports.config = {

@@ -80,7 +80,7 @@ présent
 
 
 
-## Côté client
+## Côté client ?
 
 - Rappel : NPM installe des packages pour NodeJS, pas des librairies pour le
 développement dans le navigateur
