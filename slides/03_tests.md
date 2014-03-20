@@ -194,6 +194,35 @@ module.exports = function(config) {
 
 
 
+## Couverture de test
+
+- `npm install karma-coverage`
+
+```javascript
+module.exports = function(config) {
+  config.set({
+
+    /* ... */
+
+    preprocessors: {
+      "*.js": ['coverage'],
+    },
+
+    reporters: ['coverage'],
+
+  });
+};
+```
+
+
+
+## Couverture de test
+
+<img src="assets/images/coverage-example.png" alt="Test Coverage Example" 
+width="90%" class="with-border"/>
+
+
+
 ## Tests bout-en-bout
 
 <figure>
