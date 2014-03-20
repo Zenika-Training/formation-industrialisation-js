@@ -31,6 +31,7 @@
 
 <figure>
     <img src="assets/images/jasmine-logo.png" alt="Jasmine logo"  width="50%"/>
+    <figcaption>Behavior-Driven Javascript</figcaption>
 </figure>
 
 
