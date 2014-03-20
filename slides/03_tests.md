@@ -27,6 +27,73 @@
 
 
 
+## Analyse statique
+
+<figure>
+    <img 
+      src="assets/images/jshint-logo.png" 
+      alt="JSHint logo"  
+      width="50%"
+      style="margin-top: 20%"/>
+</figure>
+
+
+
+## JSHint
+
+- http://jshint.com
+  - Analyse possible directement sur le site
+- Fork de [JSLint](http://www.jslint.com/) de Douglas Crockford
+- Recherche les erreurs
+- Fait des remarques de styles
+- Complètement configurable
+- Installable avec NPM
+  - `npm install -g jshint`
+  - `jshint <fichier.js>`
+
+
+
+## Exemple
+
+```javascript
+function une_accolade_par_là() {
+    une_autre_variable = 2 * variable
+    var variable = 0
+    la_même = '' || [];
+    if (variable == la_même) return undefined
+    consle.log("que dit jshint ?")
+    return 1
+}
+
+function une_accolade_par_ci()
+{
+    return
+    {
+        un: 'objet,'
+        bien: 'rempli'
+    }
+}
+
+console.log(une_accolade_par_ci())
+console.log(une_accolade_par_là())
+```
+
+
+
+## Exemple
+
+- Ce code s'exécute sans erreur : il affiche `undefined` deux fois
+- Sans analyse ou tests, il pourrait partir en production !
+- Qu'en dit JSHint ? 22 erreurs !
+  - `Missing semicolon` : oubli du point-virgule
+  - `'une autre variable' is not defined` : oubli du `var`
+  - `'consle' is not defined` : faute de frappe
+  - `Line breaking error 'return'` : retour à la ligne intempestif
+  - `Expected an assignment or function call and instead saw an expression` :
+  syntaxe invalide, ici il manque une virgule
+
+
+
 ## Tests unitaires
 
 <figure>
