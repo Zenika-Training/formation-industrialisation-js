@@ -94,6 +94,37 @@ console.log(une_accolade_par_là())
 
 
 
+## Intégration avec Grunt
+
+- Plugin `grunt-contrib-jshint`
+
+```javascript
+jshint: {
+
+  options: {
+    curly: true, // forcer les accolades
+    eqeqeq: true, // forcer ===
+    /* ... */
+  },
+
+  src: ['src/**/*.js'],
+  test: ['test/**/*.js'],
+},
+```
+
+
+
+## Intégration aux éditeurs de texte
+
+- Plugin pour de nombreux éditeurs
+  - Notepad++, Gedit
+  - Sublime Text, TextMate
+  - Vim, Emacs
+  - Visual Studio, Eclipse
+  - IntelliJ, WebStorm (intégré en standard)
+
+
+
 ## Tests unitaires
 
 <figure>
