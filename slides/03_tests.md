@@ -206,6 +206,13 @@ describe('a parrot', function() {
 - Divers matchers : `toBeEqual`, `toContain`, `toBeLessThan`,
 `toBeTruthy`... + matchers custom
 
+Note:
+- L'exemple décrit un perroquet qui dispose d'une méthode `onTold` pour lui
+parler et d'une méthode `repeat` pour lui faire répéter ce qu'on lui a dit. Le
+test vérifie simplement que ce qu'il répète est bien ce qu'on lui a dit.
+- Si les participants sont Java-istes : `describe` correspond à une classe, 
+`it` à une méthode.
+
 
 
 ## Setup & Teardown
@@ -232,6 +239,9 @@ describe('a parrot', function() {
 });
 ```
 
+Note:
+- "on pet" veut dire qu'on carresse le perroquet
+- "on fed" veut dire qu'on nourrit le perroquet
 
 
 ## Mocks / Spies
