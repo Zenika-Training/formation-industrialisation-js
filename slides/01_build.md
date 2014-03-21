@@ -104,44 +104,80 @@ fichier particulier
 ```javascript
 module.exports = function(grunt) {
   grunt.initConfig({
-    task1: { // Configurer une tâche 'task1'
-      options: { /*...*/ }, // Options globales pour 'task1'
-      target1: {  // Configurer la cible 'target1'
-        options: { /*...*/ }, // Surcharger des options de 'task1'
-        src: '...', // Paramètrer la cible 'target1'
-        dest: '...',
-      },
-      target2: { /*...*/ }, // Une autre cible pour 'task1'
-    },
-    task2: { /*...*/ }, // Une autre tâche
+    // Configurer des tâches et des cibles
   });
-  
-  // Charger des tâches externes
-  grunt.loadNpmTasks('task1'); // Tâche installée avec NPM
-  grunt.loadTasks('task2'); // Tâche d'un fichier local
+
+  // Importer un plugin installée avec NPM
+  grunt.loadNpmTasks('a-task-plugin'); 
+
+  // Importer une tâche à partir d'un fichier
+  grunt.loadTasks('a-task-file.js'); 
+
   // Déclarer une tâche composite
-  grunt.registerTask('default', ['task1:target2', 'task2']);
+  grunt.registerTask('task', [/* une liste de tâche */]);
+
+  // Déclarer une tâche personnalisée
+  grunt.registerTask('custom', function() {
+
+  });
 };
 ```
 
 
 
-## Syntaxe du Gruntfile
+## Configurer une tâche
 
 - Une *tâche* est un objet contenant :
   - 1 ou plusieurs cibles
   - 0 ou 1 objet `options` qui valorise les options par défaut pour toutes les
   cibles
+
+```javascript
+grunt.initConfig({
+  task: {
+    options: {
+      option1: 'valeur',
+    },
+    // Les cibles sont configurées ici
+  },
+});
+```
+
+Note:
+  - Une tâche a un nom prédéfini par le plugin qui la fourni. Donc ici `task`
+  ne doit pas comporter de faute de frappe et ne doit pas être renommée.
+  - Il faut se référer à la documentation de chaque tâche pour connaitre les
+  options
+
+
+
+## Configurer des cibles
+
 - Une *cible* est un objet contenant :
   - 0 ou 1 objet `options` qui surcharge les options de la tâche
   pour cette cible seulement
   - des paramètres (en général des chemins source et destination)
-- Se référer à la documentation de chaque tâche pour connaitre les options et
-paramètres disponibles
+
+```javascript
+task: {
+  target1: {
+    options: {
+      option1: 'surcharge',
+    },
+    parameter1: 'valeur',
+  },
+},
+```
+
+Note:
+  - Une cible a un nom arbitraire, défini par l'auteur du Gruntfile. Donc ici
+  `target1` pourrait être remplacé par n'importe quel mot.
+  - Il faut se référer à la documentation de chaque tâche pour connaitre les 
+  options et paramètres disponibles
 
 
 
-## Syntaxe du Gruntfile <small>Exemple</small>
+## Exemple réel
 
 ```javascript
 grunt.initConfig({
@@ -170,6 +206,9 @@ assets
 Note:
   - La tâche copie le dossier `assets` et tout son contenu dans le dossier
   `target`. C'est ce qu'est sensé montrer le bloc inférieur.
+  - On pourrait aussi lancer `grunt copy:assets`.
+  - Quand on appelle une tâche (et pas une cible) comme ici, toutes les cibles
+  sont exécutées après les autres
 
 
 
