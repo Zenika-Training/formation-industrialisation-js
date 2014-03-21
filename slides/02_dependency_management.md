@@ -66,10 +66,10 @@
 }
 ```
 
-Note:
-  - `~0.4.4` signifie "au moins 0.4.4, mais pas 0.5 ou plus".
-  - `^1.6.0` au moins 1.6.0, mais pas 2.0 ou plus.
-  - Plus d'explications au slide suivant
+Notes :
+- `~0.4.4` signifie "au moins 0.4.4, mais pas 0.5 ou plus".
+- `^1.6.0` au moins 1.6.0, mais pas 2.0 ou plus.
+- Plus d'explications au slide suivant
 
 
 
@@ -84,9 +84,9 @@ Note:
   - sans préfixe ou `=` ou `v` : exactement cette version
   - `<`, `<=`, `>`, `>=` sont également supportés
 
-Note:
-  - Toute version qui comporte un tiret est considérée comme pré-version
-  (1.2.3-beta par exemple), et est donc inférieur à la même version sans tiret.
+Notes :
+- Toute version qui comporte un tiret est considérée comme pré-version
+(1.2.3-beta par exemple), et est donc inférieur à la même version sans tiret.
 
 
 

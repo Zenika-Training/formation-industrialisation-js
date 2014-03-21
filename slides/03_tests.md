@@ -26,10 +26,10 @@
   - Tests de bout-en-bout
   - Calcul de la couverture
 
-Note:
-  - Ce qu'on entend par "tests d'intégration" ici, ce sont plusieurs composants
-  ensemble, avec éventuellement des ressources extérieures comme une base de
-  données.
+Notes :
+- Ce qu'on entend par "tests d'intégration" ici, ce sont plusieurs composants
+ensemble, avec éventuellement des ressources extérieures comme une base de
+données.
 
 
 
@@ -108,7 +108,7 @@ Faute de frappe
 <!-- .element: class="fragment alert alert-danger" style="position: fixed; top: 575px; right: 10px; width: 360px;" -->
 Retour à la ligne malencontreux
 
-Note:
+Notes :
 - Demander aux staigaires ce qu'ils pensent que le code va faire. Tomber en
 erreur ? Afficher quelque chose dans la console ?
 - Afficher le premier fragment et demander si on l'envoit en production.
@@ -206,7 +206,7 @@ describe('a parrot', function() {
 - Divers matchers : `toBeEqual`, `toContain`, `toBeLessThan`,
 `toBeTruthy`... + matchers custom
 
-Note:
+Notes :
 - L'exemple décrit un perroquet qui dispose d'une méthode `onTold` pour lui
 parler et d'une méthode `repeat` pour lui faire répéter ce qu'on lui a dit. Le
 test vérifie simplement que ce qu'il répète est bien ce qu'on lui a dit.
@@ -239,7 +239,7 @@ describe('a parrot', function() {
 });
 ```
 
-Note:
+Notes :
 - "on pet" veut dire qu'on carresse le perroquet
 - "on fed" veut dire qu'on nourrit le perroquet
 

@@ -78,12 +78,12 @@ MSBuild pour .net, Rake pour Ruby...
   - La commande `grunt` échoue s'il n'y pas de version de Grunt installée pour
   le projet
 
-Note:
-  - A ce moment de la formation, on a pas encore vu la différence entre
-  les installations globales (`-g`) et locales ("par projet") de NPM. Il est
-  possible d'expliquer rapidement que "par projet" signifie que Grunt est
-  installé dans un sous-dossier du projet, et que l'on verra plus précisément
-  le fonctionnement de NPM dans le chapitre suivant.
+Notes :
+- A ce moment de la formation, on a pas encore vu la différence entre
+les installations globales (`-g`) et locales ("par projet") de NPM. Il est
+possible d'expliquer rapidement que "par projet" signifie que Grunt est
+installé dans un sous-dossier du projet, et que l'on verra plus précisément
+le fonctionnement de NPM dans le chapitre suivant.
 
 
 
@@ -143,11 +143,11 @@ grunt.initConfig({
 });
 ```
 
-Note:
-  - Une tâche a un nom prédéfini par le plugin qui la fourni. Donc ici `task`
-  ne doit pas comporter de faute de frappe et ne doit pas être renommée.
-  - Il faut se référer à la documentation de chaque tâche pour connaitre les
-  options
+Notes :
+- Une tâche a un nom prédéfini par le plugin qui la fourni. Donc ici `task`
+ne doit pas comporter de faute de frappe et ne doit pas être renommée.
+- Il faut se référer à la documentation de chaque tâche pour connaitre les
+options.
 
 
 
@@ -169,11 +169,11 @@ task: {
 },
 ```
 
-Note:
-  - Une cible a un nom arbitraire, défini par l'auteur du Gruntfile. Donc ici
-  `target1` pourrait être remplacé par n'importe quel mot.
-  - Il faut se référer à la documentation de chaque tâche pour connaitre les 
-  options et paramètres disponibles
+Notes :
+- Une cible a un nom arbitraire, défini par l'auteur du Gruntfile. Donc ici
+`target1` pourrait être remplacé par n'importe quel mot.
+- Il faut se référer à la documentation de chaque tâche pour connaitre les 
+options et paramètres disponibles.
 
 
 
@@ -203,12 +203,12 @@ $ ls target
 assets
 ```
 
-Note:
-  - La tâche copie le dossier `assets` et tout son contenu dans le dossier
-  `target`. C'est ce qu'est sensé montrer le bloc inférieur.
-  - On pourrait aussi lancer `grunt copy:assets`.
-  - Quand on appelle une tâche (et pas une cible) comme ici, toutes les cibles
-  sont exécutées après les autres
+Notes :
+- La tâche copie le dossier `assets` et tout son contenu dans le dossier
+`target`. C'est ce qu'est sensé montrer le bloc inférieur.
+- On pourrait aussi lancer `grunt copy:assets`.
+- Quand on appelle une tâche (et pas une cible) comme ici, toutes les cibles
+sont exécutées après les autres.
 
 
 
@@ -223,9 +223,9 @@ Note:
   - `npm install <plugin>`
   - `grunt.loadNpmTasks('<plugin>')`
 
-Note:
-  - Le préfixe `grunt-contrib` est réservé aux plugins maintenus par l'équipe
-  Grunt
+Notes :
+- Le préfixe `grunt-contrib` est réservé aux plugins maintenus par l'équipe
+Grunt.
 
 
 
