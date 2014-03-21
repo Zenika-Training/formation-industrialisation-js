@@ -92,6 +92,7 @@ Note:
 
 ## Commandes
 
+- `npm install` peut être abbrévié `npm i`
 - `npm init` crée un `package.json` interactivement
 - `npm install` installe toutes les dépendances si un `package.json` est
 présent
@@ -99,6 +100,20 @@ présent
   - Idem pour les dépendances de développement avec `--save-dev`
   - La version peut être spécifiée : `npm install <package>@<version>`
 - Recherche : `npm search <term>`
+
+
+
+## Commandes 
+
+- L'option `--global` ou `-g` de `npm install <package>` installe la dépendance globalement. Ce n'est utile que pour les outils qui fournissent une
+interface en ligne de commande que l'ont veut disponible partout.
+- L'option `--production` installe seulement les dépendances de production
+- `npm prune` désinstalle tous les packages qui ne sont pas mentionnées dans
+`package.json`
+- `npm shrinkwrap` gèle récursivement toutes les dépendances et écrit le
+résultat dans un fichier utilisable au déploiement
+- `npm outdated` permet de savoir quels packages disposent d'une version
+plus récente que celle installée
 
 
 
