@@ -127,6 +127,25 @@ ignoré et les erreurs de syntaxe qu'il contient aussi.
 
 
 
+## Règles
+
+- Liste des règles : http://jshint.com/docs/options
+- Toutes (dés)activables
+- Configuration pour un projet à écrire dans un fichier JSON nommé `.jshintrc`
+  - Il est possible de mettre un de ces fichiers dans un sous-dossier, et il
+  surchargera les options du fichier parent
+
+```json
+{
+  "browser": true,
+  "asi": false,
+  "laxbreak": false,
+  ...
+}
+```
+
+
+
 ## Intégration avec Grunt
 
 - Plugin `grunt-contrib-jshint`
