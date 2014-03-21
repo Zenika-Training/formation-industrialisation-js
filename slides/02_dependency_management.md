@@ -57,17 +57,19 @@
   "version": "1.0.0",
   "author": "Zenika",
   "devDependencies": {
-    "grunt": "~0.4.4" // au moins 0.4.4, mais pas 0.5 ou plus
+    "grunt": "~0.4.4"
   },
   "dependencies": {
     "async": "0.2.x",
-    "underscore": "^1.6.0" // au moins 1.6.0, mais pas 2.0 ou plus
+    "underscore": "^1.6.0"
   }
 }
 ```
 
-- Les versions doivent suivre le [Semantic Versioning 2.0](http://semver.org/)
-  - version = major.minor.patch-anything
+Note:
+  - `~0.4.4` signifie "au moins 0.4.4, mais pas 0.5 ou plus".
+  - `^1.6.0` au moins 1.6.0, mais pas 2.0 ou plus.
+  - Plus d'explications au slide suivant
 
 
 
