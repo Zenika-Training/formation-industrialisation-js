@@ -158,6 +158,10 @@ $ ls target
 assets
 ```
 
+Note:
+  - La tâche copie le dossier `assets` et tout son contenu dans le dossier
+  `target`. C'est ce qu'est sensé montrer le bloc inférieur.
+
 
 
 ## Plugins
