@@ -178,7 +178,7 @@ est présent
 - L'option `--save` de `bower install <package>` enregistre la dépendance dans
 le `bower.json`
   - Idem pour les dépendances de développement avec `--save-dev`
-  - La version peut être spécifiée : `bower install <package>#<version>`
+  - La version peut être spécifiée : `bower install <package>#<version/commit>`
 - Recherche : `bower search <term>`
 
 
@@ -193,8 +193,8 @@ dans une page HTML
 &#8658; <!-- fat right arrow --> Contraint d'embarquer `bower_components` en
 production alors que tous les fichiers ne sont pas forcément utilisés
 
-- Solution : utiliser Grunt pour lancer `bower install` puis copier les
-fichiers dans le répertoire de build
+- Solution : utiliser Grunt pour copier les fichiers dans le répertoire de
+build
   - Plusieurs plugins de la communauté sont disponibles (fonctionnalités et
   maturité diverses) : `grunt-bower`, `grunt-bowercopy`, `grunt-bower-task`
   - On peut aussi le faire avec `grunt-contrib-copy`
