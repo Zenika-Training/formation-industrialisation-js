@@ -238,6 +238,7 @@ Note:
 - Extraire de la documentation JSDoc : `grunt-jsdoc`
 - Lancer des tests Jasmine : `grunt-contrib-jasmine`
 - Déployer en FTP : `grunt-ftp-deploy`
+- Déployer sur Artifactory : `grunt-artifactory-artifact`
 - ...
 
 
