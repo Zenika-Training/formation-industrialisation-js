@@ -21,9 +21,15 @@
 
 - Feedback rapide sur la fiabilité du code à tous les niveaux
   - Tests unitaires
+  - Tests d'intégration
   - Tests de bout-en-bout
   - Analyse statique
   - Calcul de la couverture
+
+Note:
+  - Ce qu'on entend par "tests d'intégration" ici, ce sont plusieurs composants
+  ensemble, avec éventuellement des ressources extérieures comme une base de
+  données.
 
 
 
