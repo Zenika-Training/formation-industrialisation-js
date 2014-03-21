@@ -73,6 +73,23 @@ Note:
 
 
 
+## Versionning
+
+- Les versions doivent suivre le Semantic Versioning 2.0
+  - http://semver.org/
+  - version = *major.minor.patch-anything*
+  - `~` : "raisonnablement proche de" (mineur fixe)
+  - `^` : "compatible avec" (majeur fixe)
+  - `x` : "n'importe quel nombre à cet emplacement"
+  - sans préfixe ou `=` ou `v` : exactement cette version
+  - `<`, `<=`, `>`, `>=` sont également supportés
+
+Note:
+  - Toute version qui comporte un tiret est considérée comme pré-version
+  (1.2.3-beta par exemple), et est donc inférieur à la même version sans tiret.
+
+
+
 ## Commandes
 
 - `npm init` crée un `package.json` interactivement
