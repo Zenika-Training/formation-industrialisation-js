@@ -177,7 +177,7 @@ jshint: {
 
 
 
-## Tests unitaires
+## Tests
 
 <figure>
     <img src="assets/images/jasmine-logo.png" alt="Jasmine logo"  width="50%"/>
@@ -298,8 +298,7 @@ describe('a parrot', function() {
 
 ## Karma
 
-- Créé par l'équipe AngularJS
-- Tourne sur Node
+- Module Node créé par l'équipe AngularJS
 - Il exécute atuomatiquement les tests
   - dans plusieurs navigateurs
   - à chaque modification du code
@@ -377,7 +376,11 @@ width="90%" class="with-border"/>
 ## Tests bout-en-bout
 
 <figure>
-    <img src="assets/images/angular-logo.png" alt="Angular logo"  width="45%"/>
+    <img 
+      src="assets/images/angular-logo.png" 
+      alt="Angular logo"  
+      width="35%"
+      style="margin-top: 10%"/>
     <figcaption>Protractor: E2E test framework for Angular apps</figcaption>
 </figure>
 
@@ -385,8 +388,7 @@ width="90%" class="with-border"/>
 
 ## Protractor
 
-- Créé par l'équipe AngularJS
-- Tourne sur Node
+- Module Node créé par l'équipe AngularJS
 - Basé sur Selenium
   - Tests par automation du navigateur
   - Nécessite un serveur Selenium
