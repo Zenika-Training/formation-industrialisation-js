@@ -86,10 +86,20 @@ Note:
   le fonctionnement de NPM dans le chapitre suivant.
 
 
-## Syntaxe du Gruntfile
 
-<!-- Obligé d'indenter avec 2 espaces sinon retour à la ligne au niveau de
-'options'. Je n'ai pas trouvé pourquoi. -->
+## Concepts
+
+- Une *tâche* (task) est une opération automatisable paramétrée abstraite
+  - Exemple : minifier
+- Une *cible* (target) est une instanciation d'une tâche sur un ensemble de
+fichier particulier
+  - Exemple : minifier le fichier `app.js` en `app.min.js`
+  - Une cible peut surcharger les paramètres de sa tâche
+- Pour une tâche donnée, on peut créer autant de cibles que l'on veut
+
+
+
+## Syntaxe du Gruntfile
 
 ```javascript
 module.exports = function(grunt) {
