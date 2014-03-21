@@ -20,10 +20,10 @@
 ## Objectifs
 
 - Feedback rapide sur la fiabilité du code à tous les niveaux
+  - Analyse statique
   - Tests unitaires
   - Tests d'intégration
   - Tests de bout-en-bout
-  - Analyse statique
   - Calcul de la couverture
 
 Note:
@@ -63,21 +63,21 @@ Note:
 
 ```javascript
 function une_accolade_par_là() {
-    une_autre_variable = 2 * variable
-    var variable = 0
-    la_même = '' || [];
-    if (variable == la_même) return undefined
-    consle.log("que dit jshint ?")
-    return 1
+  une_autre_variable = 2 * variable
+  var variable = 0
+  la_même = '' || [];
+  if (variable == la_même) return undefined
+  consle.log("que dit jshint ?")
+  return 1
 }
 
 function une_accolade_par_ci()
 {
-    return
-    {
-        un: 'objet,'
-        bien: 'rempli'
-    }
+  return
+  {
+    un: 'objet,'
+    bien: 'rempli'
+  }
 }
 
 console.log(une_accolade_par_ci())
