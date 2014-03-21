@@ -20,8 +20,10 @@
 ## Motivation
 
 - Facilité d'installation des dépendances
-- Pas de dépendances en GCL
+- Pas de dépendances dans le gestionnaire de sources
 - Gestion des dépendances transitives
+  - Si l'application dépend de `A` et que `A` dépend de `B` alors `B` est
+  localisée et téléchargée automatiquement
 
 
 
@@ -37,7 +39,6 @@
 ## NPM <small>Node Package Manager</small>
 
 - http://npmjs.org
-- Livré avec [NodeJS](http://nodejs.org)
 - ~64k packages pour la plate-forme Node
   - pas pour le Javascript côté client
   - mais utile pour les outils de développement (Grunt...)
