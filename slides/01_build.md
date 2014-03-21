@@ -103,25 +103,24 @@ fichier particulier
 
 ```javascript
 module.exports = function(grunt) {
-  'use strict';
-
   grunt.initConfig({
-    task1: {
-      options: { /*...*/ },
-      target1: {
-        src: '...',
+    task1: { // Configurer une tâche 'task1'
+      options: { /*...*/ }, // Options globales pour 'task1'
+      target1: {  // Configurer la cible 'target1'
+        options: { /*...*/ }, // Surcharger des options de 'task1'
+        src: '...', // Paramètrer la cible 'target1'
         dest: '...',
       },
-      target2: { /*...*/ },
+      target2: { /*...*/ }, // Une autre cible pour 'task1'
     },
-    task2: { /*...*/ },
+    task2: { /*...*/ }, // Une autre tâche
   });
   
   // Charger des tâches externes
-  grunt.loadNpmTasks('task1');
-  grunt.loadTasks('task2');
+  grunt.loadNpmTasks('task1'); // Tâche installée avec NPM
+  grunt.loadTasks('task2'); // Tâche d'un fichier local
   // Déclarer une tâche composite
-  grunt.registerTask('default', ['task1:target2']);
+  grunt.registerTask('default', ['task1:target2', 'task2']);
 };
 ```
 
