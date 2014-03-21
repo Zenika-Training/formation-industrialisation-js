@@ -203,5 +203,29 @@ Note:
 
 
 
+## Plugins
+
+- Charger tous les plugins peut devenir fastidieux
+```javascript
+grunt.loadNpmTask('grunt-contrib-concat');
+grunt.loadNpmTask('grunt-contrib-uglify');
+grunt.loadNpmTask('grunt-contrib-sass');
+grunt.loadNpmTask('grunt-contrib-imagemin');
+grunt.loadNpmTask('grunt-contrib-jsdoc');
+...
+```
+
+- Solution : utiliser le 
+[plugin](https://github.com/sindresorhus/load-grunt-tasks) `load-grunt-tasks`
+```javascript
+require('load-grunt-tasks')(grunt);
+```
+  - Charge tous les plugins listés dans le `package.json` (voir chapitre
+  suivant)
+
+
+
+
+
 <!-- .slide: data-background="zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->
