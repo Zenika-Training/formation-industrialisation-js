@@ -33,7 +33,7 @@ MSBuild pour .net, Rake pour Ruby...
 
 
 
-## Pourquoi un build automatisé <small>côté client ?</small>
+## Pourquoi un build automatisé côté client ?
 
 - Concaténation
 - Minification
@@ -57,7 +57,6 @@ MSBuild pour .net, Rake pour Ruby...
 
 ## Principes de fonctionnement
 
-- Écrit en Javascript, il tourne sur NodeJS
 - Description des tâches dans un fichier `Gruntfile.js`
   - Pur Javascript
 - Un exécutable en ligne de commande : `grunt tâches...`
@@ -119,7 +118,8 @@ module.exports = function(grunt) {
   - 0 ou 1 objet `options` qui surcharge les options de la tâche
   pour cette cible seulement
   - des paramètres (en général des chemins source et destination)
-- Les options ne sont jamais obligatoires, les paramètres peuvent l'être ou non
+- Se référer à la documentation de chaque tâche pour connaitre les options et
+paramètres disponibles
 
 
 
@@ -136,13 +136,12 @@ grunt.initConfig({
 });
   
 grunt.loadNpmTasks('grunt-contrib-copy');
-grunt.registerTask('default', ['copy']);
 ```
 
 ```dos
 $ ls
 assets    Gruntfile.js
-$ grunt
+$ grunt copy
 Running "copy:assets" (copy) task
 Created 1 directories, copied 1 file
 Done, without errors.
@@ -156,12 +155,16 @@ assets
 
 - Grunt n'embarque aucune tâche prédéfinie
 - Ces tâches sont disponibles sous forme de plugins
-  - 25 sont maintenus par l'équipe Grunt :
-  [`grunt-contrib-*`](https://github.com/gruntjs/grunt-contrib)
+  - [25](https://github.com/gruntjs/grunt-contrib) sont maintenus par l'équipe 
+  Grunt : `grunt-contrib-*`
   - Des dizaines d'autres par la communauté
 - Installation :
   - `npm install <plugin>`
   - `grunt.loadNpmTasks('<plugin>')`
+
+Note:
+  - Le préfixe `grunt-contrib` est réservé aux plugins maintenus par l'équipe
+  Grunt
 
 
 
