@@ -144,6 +144,13 @@ ignoré et les erreurs de syntaxe qu'il contient aussi.
 }
 ```
 
+Notes :
+- `brower` : le script s'exécutera dans le navigateur (`window` est disponible
+globalement).
+- `asi` : Automatic Semi-colon Insertion, autorise l'oubli de points-virgules.
+- `laxbreak` : autorise les retours à la ligne qui pourrait poser problème
+(notamment après `return` comme vu slide précédente).
+
 
 
 ## Intégration avec Grunt
