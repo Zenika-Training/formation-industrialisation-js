@@ -276,6 +276,7 @@ describe('a parrot', function() {
 - Dans Node, à l'aide du projet `jasmine-node` (Jasmine 1.3)
   - `npm install -g jasmine-node`
   - `jasmine-node <fichiers/dossiers de tests>`
+  - Intégrable avec Grunt
 
 
 
