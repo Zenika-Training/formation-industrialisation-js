@@ -85,7 +85,7 @@ sut le Chrome Web Store
 
 <img 
   src="assets/images/livereload-chrome-activated.png" 
-  alt="Karma logo"  
+  alt="LiveReload extension in chrome"  
   width="20%"
   class="with-border"/>
 
