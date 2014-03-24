@@ -94,11 +94,11 @@ sut le Chrome Web Store
 ## Les méta-langages
 
 - Méta-langages Javascript
-  - CoffeeScript
-  - TypeScript
+  - *CoffeeScript*
+  - *TypeScript*
   - Dart
 - Méta-langages CSS
-  - Sass
+  - *Sass*
   - Less
 
 
@@ -310,14 +310,27 @@ nav
 - Héritage
 
 ```sass
-.message {
+.message
+  border: 1px solid #ccc
+  padding: 10px
+  color: #333
+
+.success
+  @extend .message
+  border-color: green
+```
+
+Notes :
+- Le CSS généré :
+
+```css
+.message .success {
   border: 1px solid #ccc;
   padding: 10px;
   color: #333;
 }
 
 .success {
-  @extend .message;
   border-color: green;
 }
 ```
