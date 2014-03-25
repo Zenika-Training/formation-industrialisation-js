@@ -48,9 +48,8 @@ suivantes : `npm install` puis `grunt`.
 - Créer un Gruntfile et configurer la tâche `jshint`.
   - La tâche `jshint` accepte des cibles sous forme de tableaux de string,
   chaque string étant un *filesystem glob* tel que `js/**/*.js`.
-  Alternativement, la cible peut être un objet contenant un attribut `files`,
-  lui-même un objet contenant un attribut `src` qui contient le tableaux de
-  chemins.
+  Alternativement, la cible peut être un objet contenant un attribut `src` qui
+  contient un chemin ou un tableaux de chemins.
   - Créer une cible `gruntfile` pour Gruntfile et une cible `app` pour les fichiers de l'applications qui se trouvent dans le dossier `js/app`.
 - Exécuter `grunt jshint:gruntfile`, et corriger les erreurs s'il y en a.
 - Exécuter `grunt jshint:app`, et remarquer les erreurs qui s'affichent.
@@ -83,10 +82,10 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   Activer le mode strict en tête de script est une mauvaise pratique puisque 
   cela rend le script impossible à concaténer avec un script non-strict.
   La bonne pratique veut que chaque script soit englobé par une fonction 
-  auto-appelante (`(function(){}())`), qui elle est un mode strict. C'est cela
+  auto-appelante (`(function(){}())`), qui elle est en mode strict. C'est cela
   que JSHint nous conseille de faire. Cependant, nous n'allons pas concaténer
   notre javascript applicatif avec du javascript tierce-partie, et tous les
-  scripts de l'application sont stricts. Il n'y a donc pas de problèmes : nous
+  scripts de l'application sont stricts. Il n'y a donc pas de problème : nous
   pouvons ignorer cett erreur en activant l'option `globalstrict`.
 - Relancer la tâche et vérifier qu'aucune erreur ne subsiste.
 
