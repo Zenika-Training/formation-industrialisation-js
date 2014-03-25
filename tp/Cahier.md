@@ -21,6 +21,15 @@ bien dans le `PATH`, et l'ajouter si nécessaire.
 TODO
 
 
+
+### Serveur
+
+Pour tester l'application, il nous faut un serveur. Un serveur NodeJS est
+fourni dans le répertoire `Server/nodejs`. Pour le lancer, exécuter 
+`node server.js`. Il sert par défaut le dossier `TP0` mais il est possible 
+de modifier le répertoire servi dans `server.json`.
+
+
 ### Grunt
 
 Exécuter la commande `npm install -g grunt-cli` pour installer la commande 
@@ -112,6 +121,8 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   - La configuration a la même structure que `concat`. Créer une cible `app` et
   une cible `thridparty`.
 - Exécuter la tâche et vérifier le résultat.
+- Editer `index.html` pour qu'il référence les fichiers minifiés.
+- Lancer l'application et vérifier son fonctionnement.
 
 
 ### Bonus
