@@ -1,5 +1,5 @@
 {
 	"port": 8081,
 	"contacts": "../contacts.json",
-	"root": "../../Corrections/TP1"
+	"root": "../../TP0"
 }
