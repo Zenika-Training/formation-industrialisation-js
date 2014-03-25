@@ -28,6 +28,7 @@ Exécuter la commande `npm install -g grunt-cli` pour installer la commande
 dans le répertoire de travail et exécuter `npm install grunt`.
 
 
+
 ## TP 1 : Génération d'un livrable
 
 Nous allons mettre en place un système de build automatisé pour l'application
@@ -37,9 +38,6 @@ existante ZenContacts. Ce build se compose des étapes suivantes :
 - Concaténation de l'ensemble des fichiers javascript en seulement 2 
 fichiers : un pour les librairies tierce, et un pour l'application elle-même
 - Minification des 2 fichiers précédemment créés
-
-Le build complet devra être exécutable depuis les sources via les commandes
-suivantes : `npm install` puis `grunt`.
 
 
 ### Analyse syntaxique Javascript
