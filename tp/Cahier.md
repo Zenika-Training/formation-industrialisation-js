@@ -34,12 +34,11 @@ Nous allons mettre en place un système de build automatisé pour l'application
 existante ZenContacts. Ce build se compose des étapes suivantes :
 - Analyse syntaxique du Gruntfile
 - Analyse syntaxique du javascript
-- Exécution des tests
 - Concaténation de l'ensemble des fichiers javascript en seulement 2 
 fichiers : un pour les librairies tierce, et un pour l'application elle-même
 - Minification des 2 fichiers précédemment créés
 
-Le build complet pourra être exécuté sur un poste vierge via les commandes
+Le build complet devra être exécutable depuis les sources via les commandes
 suivantes : `npm install` puis `grunt`.
 
 
