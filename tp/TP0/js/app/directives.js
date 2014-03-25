@@ -16,7 +16,7 @@ zenContactDirectives.directive('autoHeight', function () {
   };
 });
 
-zenContactDirectives.directive('autoPopup', function ($http) {
+zenContactDirectives.directive('autoPopup', ['$http', function ($http) {
   var modal = $('<div class="modal hide fade" tabindex="-1"><div class="modal-body"></div></div>');
   var modelContent = modal.find('.modal-body');
 
@@ -28,9 +28,9 @@ zenContactDirectives.directive('autoPopup', function ($http) {
       });
     });
   };
-});
+}]);
 
-zenContactDirectives.directive('markdown', function ($sce) {
+zenContactDirectives.directive('markdown', ['$sce', function ($sce) {
   return {
     restrict: 'E',
     replace: true,
@@ -51,4 +51,4 @@ zenContactDirectives.directive('markdown', function ($sce) {
       });
     }
   };
-});
+}]);

@@ -2,7 +2,7 @@
 
 var zenContactServices = angular.module('zenContactServices', ['ngResource']);
 
-zenContactServices.service('contactService', function ($http) {
+zenContactServices.service('contactService', ['$http', function ($http) {
     this.getAllContacts = function (callback) {
         $http.get('/rest/contacts').success(function (contacts) {
             callback(contacts);
@@ -35,28 +35,32 @@ zenContactServices.service('contactService', function ($http) {
                 });
         }
     };
-});
+}]);
 
-zenContactServices.factory('Contact', function($resource) {
-    return $resource('/rest/contacts/:id', {id:'@id'}, {update: {method:'PUT', params:{id:'@id'}}});
-});
+zenContactServices.factory('Contact', ['$resource', 
+    function ($resource) {
+        return $resource('/rest/contacts/:id', {id:'@id'}, {update: {method:'PUT', params:{id:'@id'}}});
+    }
+]);
 
-zenContactServices.factory('authService', function($location, $cookieStore) {
-    var redirectUrl;
-    return {
-        maybeRedirect: function(){ $location.path(redirectUrl ? redirectUrl : "/list"); },
-        logout: function(){ $cookieStore.remove('Auth-Token'); },
-        token: function(){ return $cookieStore.get('Auth-Token'); },
-        redirectToLogin: function(){
-            redirectUrl = $location.path();
-            $location.path('/login');
-        },
-        storeToken: function(response){
-            var token = response.headers('Auth-Token');
-            if (token) {
-                $cookieStore.put('Auth-Token', token);
+zenContactServices.factory('authService', ['$location', '$cookieStore', 
+    function ($location, $cookieStore) {
+        var redirectUrl;
+        return {
+            maybeRedirect: function(){ $location.path(redirectUrl ? redirectUrl : "/list"); },
+            logout: function(){ $cookieStore.remove('Auth-Token'); },
+            token: function(){ return $cookieStore.get('Auth-Token'); },
+            redirectToLogin: function(){
+                redirectUrl = $location.path();
+                $location.path('/login');
+            },
+            storeToken: function(response){
+                var token = response.headers('Auth-Token');
+                if (token) {
+                    $cookieStore.put('Auth-Token', token);
+                }
             }
-        }
-    };
-});
+        };
+    }
+]);
 
