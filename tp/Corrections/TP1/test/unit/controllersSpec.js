@@ -13,8 +13,8 @@ describe('controllers', function(){
   beforeEach(module('zenContactApp'));
 
   beforeEach(inject(function($rootScope, $httpBackend) {
-  	scope = $rootScope.$new();
-  	$httpBackend.expect('GET').respond(contacts)
+    scope = $rootScope.$new();
+    $httpBackend.expect('GET').respond(contacts)
   }));  
 
   it('should define the name filter', inject(function($controller) {
@@ -22,7 +22,7 @@ describe('controllers', function(){
 
     $controller('ContactListController', {
       $scope: scope
-  	})
+    })
 
     expect(angular.isFunction(scope.nameFilter)).toBeTruthy()
   }));
@@ -31,10 +31,10 @@ describe('controllers', function(){
     expect(scope.contacts).toBeUndefined()
 
     $controller('ContactListController', {
-	    $scope: scope
-	  })
+      $scope: scope
+    })
 
-	  expect(scope.contacts).toBeDefined()
+    expect(scope.contacts).toBeDefined()
 
     $httpBackend.flush()
 
