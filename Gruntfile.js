@@ -29,6 +29,9 @@ module.exports = function(grunt) {
             index: {
                 files: 'slides/index.html',
             },
+            exercices: {
+                files: 'tp/Cahier.md',
+            },
             gruntfile: {
                 files: 'Gruntfile.js',
             },
