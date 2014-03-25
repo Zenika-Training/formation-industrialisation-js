@@ -89,3 +89,16 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   scripts de l'application sont stricts. Il n'y a donc pas de problèmes : nous
   pouvons ignorer cett erreur en activant l'option `globalstrict`.
 - Relancer la tâche et vérifier qu'aucune erreur ne subsiste.
+
+
+### Concaténation
+
+- Installer `grunt-contrib-concat`.
+- Configurer la tâche `concat`.
+  - Une cible de `concat` est un object contenant un tableaux de 
+  *filesystem glob* source `src` et un chemin de destination `dest`.
+  - Ajouter une cible `app` qui concatène les fichiers javascript applicatifs
+  (dossier `js/app/`) et qui enregistre le résultat dans un dossier `target`.
+  - Ajouter une cible `thirdparty` qui concatène tous les fichiers javascript
+  des librairies (tous les dossiers se trouvant dans `js/` sauf `app/`).
+- Exécuter `grunt concat` et vérifier le résultat.
