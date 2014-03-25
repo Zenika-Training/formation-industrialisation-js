@@ -18,13 +18,13 @@ module.exports = function(grunt) {
                 files: 'slides/*.md',
             },
             assets: {
-                files: 'slides/assets/*',
+                files: 'slides/assets/**',
             },
             theme: {
-                files: 'slides/zenika/*'
+                files: 'slides/zenika/**'
             },
             reveal: {
-                files: 'slides/reveal.js/*',
+                files: 'slides/reveal.js/**',
             },
             index: {
                 files: 'slides/index.html',
