@@ -14,17 +14,24 @@ module.exports = function(grunt) {
     },
     concat: {
       app: {
-        src: 'js/app/*.js',
+        src: [
+          'js/app/app.js',
+          'js/app/controllers.js',
+          'js/app/services.js',
+          'js/app/filters.js',
+          'js/app/directives.js',
+        ],
         dest: 'target/app.js',
       },
       thirdparty: {
         src: [
-          'js/angular/*.js',
-          'js/angular-ui/*.js',
-          'js/bootstrap/*.js',
-          'js/fuse/*.js',
           'js/jquery/*.js',
+          'js/bootstrap/*.js',
+          'js/angular/angular.js',
+          'js/angular/angular-*.js',
+          'js/angular-ui/*.js',
           'js/markdown/*.js',
+          'js/fuse/*.js',
         ],
         dest: 'target/thirdparty.js',
       },
