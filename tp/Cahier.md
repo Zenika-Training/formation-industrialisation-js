@@ -108,3 +108,12 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   - La configuration a la même structure que `concat`. Créer une cible `app` et
   une cible `thridparty`.
 - Exécuter la tâche et vérifier le résultat.
+
+
+### Bonus
+
+- Ajouter une tâche composite par défaut qui exécute les 3 tâches.
+- Utiliser `grunt-contrib-clean` pour supprimer le dossier `target`. La tâche
+`clean` n'a pas besoin de cibles, il est possible de la définir simplement par
+un tableau de chemins à supprimer.
+- Vérifier le fonctionnement du build complet avec `grunt clean default`.
