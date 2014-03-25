@@ -29,8 +29,19 @@ module.exports = function(grunt) {
         dest: 'target/thirdparty.js',
       },
     },
+    uglify: {
+      app: {
+        src: 'target/app.js',
+        dest: 'target/app.min.js',
+      },
+      thirdparty: {
+        src: 'target/thirdparty.js',
+        dest: 'target/thirdparty.min.js',
+      },
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 };

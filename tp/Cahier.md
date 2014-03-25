@@ -101,3 +101,12 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   - Ajouter une cible `thirdparty` qui concatène tous les fichiers javascript
   des librairies (tous les dossiers se trouvant dans `js/` sauf `app/`).
 - Exécuter `grunt concat` et vérifier le résultat.
+
+
+### Minification
+
+- Installer `grunt-contrib-uglify`.
+- Configurer la tâche `uglify`.
+  - La configuration a la même structure que `concat`. Créer une cible `app` et
+  une cible `thridparty`.
+- Exécuter la tâche et vérifier le résultat.
