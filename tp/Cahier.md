@@ -117,3 +117,13 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
 `clean` n'a pas besoin de cibles, il est possible de la définir simplement par
 un tableau de chemins à supprimer.
 - Vérifier le fonctionnement du build complet avec `grunt clean default`.
+
+
+
+## TP2 : Gestion des dépendances
+
+### Dépendances de développement avec NPM
+
+Ecrire un fichier `package.json` qui liste les dépendances du build créé
+pendant le TP1, afin que tout puisse être installé avec un simple 
+`npm install`.
