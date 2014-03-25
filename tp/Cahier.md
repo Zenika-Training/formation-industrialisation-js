@@ -185,3 +185,23 @@ headless PhantomJS.
 - Relancer `grunt karma` pour vérifier le fonctionnement.
 - Ajouter la tâche `karma` à la tâche par défaut.
 
+
+## TP4 : Rechargement à chaud
+
+Pour ce TP nous allons mettre en place LiveReload.
+
+- Installer l'extension LiveReload pour le navigateur de travail.
+- Installer `grunt-contrib-watch`.
+- Configurer la tâche `watch`.
+  - Activer l'option `livereload` pour toutes les cibles.
+  - Créer une cible `js` qui surveille les fichiers javascript et qui lance l'analyse syntaxique et les tests quand cela arrive.
+  - Créer une cible `tests` qui surveille les tests qui les relance.
+  - Créer une cible qui surveille les fichiers HTML (`index.html` et le
+  contenu du dossier `view`). Il n'y a aucune tâche à lancer.
+- Lancer la tâche puis faire une modification quelconque afin de tester le
+rechargement.
+
+
+### Bonus
+
+- Ajouter une cible qui surveille le Gruntfile lui-même.
