@@ -1,0 +1,14 @@
+{
+  "name": "zencontact",
+  "devDependencies": {
+    "angular": "~1.2.15",
+    "angular-route": "~1.2.15",
+    "angular-resource": "~1.2.15",
+    "angular-cookies": "~1.2.15",
+    "angular-ui-utils": "~0.1.1",
+    "fuse": "*",
+    "markdown": "~0.5.0",
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.1.1"
+  }
+}

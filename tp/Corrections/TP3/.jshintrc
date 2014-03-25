@@ -1,0 +1,11 @@
+{
+  "browser": true,
+  "jquery": true,
+  "globalstrict": true,
+  "globals": {
+    "angular": false,
+    "markdown": false,
+    "Fuse": false,
+    "zenContactApp": true
+  }
+}

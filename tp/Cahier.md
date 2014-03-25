@@ -154,3 +154,34 @@ Angular Cookies, et Angular UI Utils.
 `bower install`. Vérifier que toutes les dépendances sont présentes.
 - Adapter la tâche `concat` du Gruntfile pour qu'elle utilise les fichiers
 téléchargés par Bower.
+
+
+
+## TP3 : Tests
+
+Comme nous avons déjà rédigé des tests lors de la formation AngularJS, nous
+allons ici nous contenter d'intégrer l'exécution de ceux-ci à Grunt.
+
+- Mettre à jour la configuration Karma (fichier `test/karma.conf.js`) pour
+qu'elle charge les fichiers tierce-partie depuis Bower.
+- Installer `grunt-karma`.
+- Installer les plugins suivants : `karma-jasmine`, `karma-chrome-launcher`,
+`karma-firefox-launcher`.
+- Configurer la tâche `karma`.
+  - Les cibles de la tâche `karma` sont des objets contenant au moins
+  l'attribut `configFile` égal à un chemin vers un fichier de configuration
+  Karma. Afin que Karma ne bloque pas le build, il faut ajouter l'attribut 
+  `singleRun` et lle valoriser à `true`.
+- Exécuter la tâche.
+
+L'ouverture des navigateurs par Karma peut devenir gênante sur un poste de
+développement. Pour l'éviter, le plus simple est d'utiliser le navigateur
+headless PhantomJS.
+
+- Installer PhantomJS à l'aide de NPM.
+- Installer le plugin PhantomJS pour Karma (son nom est
+`karma-phantomjs-launcher`).
+- Modifier la configuration Karma.
+- Relancer `grunt karma` pour vérifier le fonctionnement.
+- Ajouter la tâche `karma` à la tâche par défaut.
+
