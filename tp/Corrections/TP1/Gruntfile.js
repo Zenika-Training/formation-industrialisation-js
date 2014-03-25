@@ -9,12 +9,12 @@ module.exports = function(grunt) {
         options: {
           jshintrc: true,
         },
-        files: { src: ['js/app/*.js'] },
+        src: 'js/app/*.js',
       }
     },
     concat: {
       app: {
-        src: ['js/app/*.js'],
+        src: 'js/app/*.js',
         dest: 'target/app.js',
       },
       thirdparty: {
