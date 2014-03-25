@@ -142,3 +142,15 @@ un tableau de chemins à supprimer.
 Ecrire un fichier `package.json` qui liste les dépendances du build créé
 pendant le TP1, afin que tout puisse être installé avec un simple 
 `npm install`.
+
+
+### Dépendances côté client avec Bower
+
+- Installer Bower à l'aide de NPM.
+- Utiliser Bower pour télécharger toutes les dépendances de l'application ainsi qu'enregistrer la liste des dépendances dans un `bower.json` : 
+jQuery, Bootstrap, Markdown, Fuse, Angular, Angular Resource, Angular Route, 
+Angular Cookies, et Angular UI Utils.
+- Pour tester le `bower.json`, supprimer `bower_components` puis exécuter 
+`bower install`. Vérifier que toutes les dépendances sont présentes.
+- Adapter la tâche `concat` du Gruntfile pour qu'elle utilise les fichiers
+téléchargés par Bower.
