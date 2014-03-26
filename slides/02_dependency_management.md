@@ -203,3 +203,8 @@ build
 
 <!-- .slide: data-background="zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->
+
+
+
+<!-- .slide: data-background="zenika/images/tp2.png" -->
+<!-- .slide: data-background-size="30%" -->
