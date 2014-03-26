@@ -10,15 +10,29 @@
 Si une connexion internet est disponible, se rendre sur http://nodejs.org et
 télécharger la dernière version de NodeJS. NPM est embarqué. Après
 l'installation, lancer une invite de commande et exécuter `node --version` pour
-vérifier que la commande `node` est disponible. Faire de même pour `npm`.
-
-En cas de problème, vérifier que le dossier d'installation de NodeJS se trouve
+vérifier que la commande `node` est disponible. Faire de même pour `npm`. En
+cas de problème, vérifier que le dossier d'installation de NodeJS se trouve
 bien dans le `PATH`, et l'ajouter si nécessaire.
+
+Sans connexion internet, utiliser la version fournie par le formateur dans le
+dossier `Node`. Décompresser l'archive `node-windows.zip` et ajouter le
+dossier résultant au `PATH`. Pour plus de faciliter, renommer `node-64.exe` 
+(ou `node-32.exe` sur un système 32 bits) en `node.exe`.
 
 
 #### Linux
 
-TODO
+Si une connexion internet est disponible, se rendre sur http://nodejs.org et
+télécharger la dernière version de NodeJS. NPM est embarqué. Décompresser,
+l'archive et ajouter le dossier `bin` au `PATH`.
+
+Sur un système Debian il est possible d'utiliser APT, mais les versions sont un
+peu anciennes. Les paquets à installer sont `node` et `npm`. La commande dans
+pour Node est dans ce cas `nodejs` au lieu de `node`.
+
+Sans connexion internet, utiliser la version fourni par le formateur dans le
+dossier `Node`. Décompresser l'archive `node-v0.10.22-linux-x64.zip` et
+ajouter le dossier `bin` au `PATH`.
 
 
 
