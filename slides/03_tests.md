@@ -109,6 +109,9 @@ Faute de frappe
 Retour à la ligne malencontreux
 
 Notes :
+- Cette slide contient des fragments qui vont apparaitre au fur et à mesure.
+- Les fragments n'apparaissent pas sur les slides papier des participants,
+il peut donc être intéressant de leur demander de prendre des notes.
 - Demander aux staigaires ce qu'ils pensent que le code va faire. Tomber en
 erreur ? Afficher quelque chose dans la console ?
 - Afficher le premier fragment et demander si on l'envoit en production.
