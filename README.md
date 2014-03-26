@@ -1,14 +1,16 @@
 # Consulter les slides
 
 - Lancer le serveur web inclus : `slides/serve`
-- Naviguer sur `http://localhost:8000`
+- Ouvrir Chrome sur `http://localhost:8000`
 - Vous arriverez sur le chapitre zéro, slide une, c'est-à-dire la page de garde
 de la formation
 
 Alternativement, si vous disposez de NodeJS, NPM et Grunt :
 - `npm install`
-- `grunt` (lance un serveur sur le port 8000, avec LiveReload)
-- Naviguer sur `http://localhost:8000`
+- `grunt`
+
+**Les slides ont seulement été testées avec Chrome !** Firefox ne centre pas le
+contenu correctement.
 
 ## Navigation
 

@@ -4,6 +4,9 @@ module.exports = function(grunt) {
         connect: {
             options: {
                 base: './slides/',
+                open: true,
+                hostname: 'localhost',
+                port: 9009,
             },
             server: {},
             keepalive: {
