@@ -247,11 +247,11 @@ Grunt.
 
 - Charger tous les plugins peut devenir fastidieux
 ```javascript
-grunt.loadNpmTask('grunt-contrib-concat');
-grunt.loadNpmTask('grunt-contrib-uglify');
-grunt.loadNpmTask('grunt-contrib-sass');
-grunt.loadNpmTask('grunt-contrib-imagemin');
-grunt.loadNpmTask('grunt-contrib-jsdoc');
+grunt.loadNpmTasks('grunt-contrib-concat');
+grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-contrib-sass');
+grunt.loadNpmTasks('grunt-contrib-imagemin');
+grunt.loadNpmTasks('grunt-contrib-jsdoc');
 ...
 ```
 
