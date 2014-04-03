@@ -3,6 +3,12 @@
 
 ## Pré-requis
 
+### Git
+
+Se rendre sur http://git-scm.com/ et télécharger la dernière version de Git.
+S'assurer qu'après l'installation, la commande git est disponible. Sinon,
+ajouter le dossier `bin` de Git au `PATH`.
+
 ### NodeJS et NPM
 
 #### Windows
