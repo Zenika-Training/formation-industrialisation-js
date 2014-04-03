@@ -126,7 +126,7 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   *filesystem glob* source `src` et un chemin de destination `dest`.
   - Attention la concaténation est effectué dans l'ordre du tableau donné à 
   `src`. Il est important de respecter l'ordre de chargement des fichiers. 
-  Par exemple il est impératif que `angular.js` apparaissent avant 
+  Par exemple il est impératif que `angular.js` apparaisse avant 
   `angular-animate.js`. Se référer à `index.html` pour trouver l'ordre précis.
   - Ajouter une cible `app` qui concatène les fichiers javascript applicatifs
   (dossier `js/app/`) et qui enregistre le résultat dans un dossier `target`.
