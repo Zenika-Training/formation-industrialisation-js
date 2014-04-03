@@ -174,6 +174,8 @@ jshint: {
 },
 ```
 
+- option `jshintrc: true` pour externaliser les règles
+
 
 
 ## Intégration aux éditeurs de texte
