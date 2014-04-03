@@ -100,7 +100,8 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   - Ajouter les globales `markdown`, `Fuse`, et `zenContactApp` (attention
   cette dernière étant définie par l'application, il faut mettre `true` en
   valeur).
-  - `'$' is not defined` se corrige en activant l'option `jquery`.
+  - `'$' is not defined` se corrige en activant l'option `jquery` (attention
+  c'est une option, pas une globale).
 - Relancer la tâche. Il ne devrait rester que 2 types d'erreurs.
   - Corriger les `Missing semicolon` en éditant les fichiers incriminés.
   - L'erreur `Use the function form of "use strict"` est intéressante. Pour le
