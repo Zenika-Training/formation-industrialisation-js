@@ -94,7 +94,7 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   redéfinie ou non.
   - Ajouter `"globals": { "angular": false }` dans `.jshintrc`.
   - Avant de relancer la tâche, modifier votre Gruntfile pour qu'il utilise le
-  `.jshintrc` en ajoutant l'option `jshint: true` à la cible `app`.
+  `.jshintrc` en ajoutant l'option `jshintrc: true` à la cible `app`.
   - Relancer la tâche et vérifier que `window` et `angular` ne posent plus de
   soucis.
   - Ajouter les globales `markdown`, `Fuse`, et `zenContactApp` (attention
