@@ -1,12 +1,15 @@
 # Consulter les slides
 
-- Lancer le serveur web inclus : `slides/serve`
+- Aller dans le répertoire slides
+- Lancer le serveur web inclus : `./serve` (linux) ou `.\serve.exe` (windows)
 - Ouvrir Chrome sur `http://localhost:8000`
 - Vous arriverez sur le chapitre zéro, slide une, c'est-à-dire la page de garde de la formation
 
 Alternativement, si vous disposez de NodeJS, NPM et Grunt :
 - `npm install`
 - `grunt`
+
+L'avantage de Grunt est qu'il active le mode livereload pour l'édition.
 
 **Les slides ont seulement été testées avec Chrome !** Firefox ne centre pas le contenu correctement.
 
@@ -27,7 +30,7 @@ Alternativement, si vous disposez de NodeJS, NPM et Grunt :
 ## Exporter en PDF
 
 - Ouvrir les slides dans Chrome
-- Ajouter `?print-pdf` à la fin de l'URL
+- Ajouter `?print-pdf` à la fin de l'URL (`http://localhost:8000?print-pdf`)
 - Contrôle-P pour amener les options d'impression
 - Sélectionner :
   - Destination : Enregistrer au format PDF
@@ -49,6 +52,21 @@ Reveal est capable de convertir le markdown en HTML à la volée, il n'y a donc 
 ## Inclusion du Markdown
 
 Pour modifier la liste de fichiers chargés, éditer `index.html`. La partie centrale comprend un élément `section` par fichier. Il suffit de créer, modifier, déplacer, ou supprimer ces éléments.
+
+Exemple: 
+
+```html
+<div class="slides">
+
+  <section 
+    data-markdown="00_agenda.md"  
+    data-vertical="^\r?\n\r?\n\r?\n"
+    data-notes="^Notes :">
+  </section>
+
+  ...
+</div>
+```
 
 ## Contenu
 
@@ -109,7 +127,7 @@ Les pages de questions n'ont pas de titre et le fond `questions.png` avec une ta
 
 <pre><code>```javascript<br/>function(arg) { return 'du javascript en couleur !'; }<br/>```</code></pre>
 
-- Il n'y a pas de reotur à la ligne automatique dans les blocs de code, il faut donc vérifier que les lignes rentrent bien dans la largeur de la slide.
+- Il n'y a pas de retour à la ligne automatique dans les blocs de code, il faut donc vérifier que les lignes rentrent bien dans la largeur de la slide.
 - Si une ligne de code commence par une suite continue d'espaces trop longue, la ligne est mise à la ligne. Il est donc nécessaire d'indenter avec 2 espaces seulement.
 
 #### Images
