@@ -5,13 +5,9 @@
 - Ouvrir Chrome sur `http://localhost:8000`
 - Vous arriverez sur le chapitre zéro, slide une, c'est-à-dire la page de garde de la formation
 
-Alternativement, si vous disposez de NodeJS, NPM et Grunt :
-- `npm install`
-- `grunt`
+Alternativement, vous pouvez lancer un serveur web avec *Grunt*, avec le mode **livereload**, pour la prise en compte automatique des modifications lors de l'édition : `npm install && grunt`
 
-L'avantage de Grunt est qu'il active le mode livereload pour l'édition.
-
-**Les slides ont seulement été testées avec Chrome !** Firefox ne centre pas le contenu correctement.
+A ce jour, **les slides ont seulement été testées avec Chrome !** Firefox ne centre pas le contenu correctement.
 
 ## Navigation
 
