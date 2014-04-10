@@ -116,11 +116,11 @@
         'use strict';
 
         function forEachSlide(action) {
-          var forEach = Array.prototype.forEach;
+          function forEach(nodes, action) { Array.prototype.forEach.call(nodes, action); }
           var chapters = document.querySelectorAll('.reveal .slides > section');
-          forEach.call(chapters, function(chapter, chapterIndex) {
+          forEach(chapters, function(chapter, chapterIndex) {
             var slides = chapter.querySelectorAll('section');
-            forEach.call(slides, function(slide, slideIndex) {
+            forEach(slides, function(slide, slideIndex) {
               action(slide, chapterIndex, slideIndex);
             });
           });
@@ -134,9 +134,11 @@
         }
 
         function addSlideNumber(slide, chapterIndex, slideIndex) {
-          slide.appendChild(footer(
-            'slide-number',
-            chapterIndex.toString() + (slideIndex > 0 ? ' - ' + slideIndex : '')));
+          slide.appendChild(footer('slide-number', function() {
+            if (chapterIndex == 0) return '';
+            if (slideIndex == 0) return '';
+            return chapterIndex.toString() + ' - ' + slideIndex.toString();
+          }())); 
         }
 
         function addCopyright(slide) {
