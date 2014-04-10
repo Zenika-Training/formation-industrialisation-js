@@ -35,6 +35,8 @@ body {
 
 .reveal .slides section,
 .reveal .slides section section {
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   padding: 0 40px; }
 
@@ -214,19 +216,21 @@ body {
 /*********************************************
  * FOOTER (style copied from reveal.css -> .reveal .slide-number)
  *********************************************/
-.reveal footer {
-  position: fixed; 
-  display: block;
-  left: 15px; 
-  bottom: 15px; 
-  opacity: .5;
-  z-index: 13; 
-  color: #b30c37;
+.reveal footer, .reveal .slides footer {
+  position: absolute;
+  bottom: 15px;
+  font-size: 12px;
+  opacity: 0.5; }
+
+.reveal .master-toc-return {
+  left: 15px;
+  bottom: 15px;
   font-size: 20px; }
 
-.reveal .slide-number {
-  color: #b30c37;
-  font-size: 20px; }
+.reveal .copyright {
+  left: 0px;
+  width: 100%;
+  text-align: center; }
 
 /*********************************************
  * ALERTS (taken from bootstrap)

@@ -76,9 +76,9 @@
 
       </div>
 
-        <footer>
-          <a href="#/master-toc">&#10548; <!-- left-to-up cornered arrow --></a>
-        </footer>
+      <footer class="master-toc-return">
+        <a href="#/master-toc">&#10548; <!-- left-to-up cornered arrow --></a>
+      </footer>
 
     </div>
 
@@ -110,6 +110,39 @@
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
           { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
+      });
+
+      Reveal.addEventListener('ready', function() {
+        'use strict';
+
+        function forEachSlide(action) {
+          var result = [];
+          var forEach = Array.prototype.forEach;
+          var chapters = document.querySelectorAll('.reveal .slides > section');
+          forEach.call(chapters, function(chapter, chapterIndex) {
+            var slides = chapter.querySelectorAll('section');
+            forEach.call(slides, function(slide, slideIndex) {
+              action(slide, chapterIndex, slideIndex);
+            });
+          });
+        }
+
+        function addSlideNumber(slide, chapterIndex, slideIndex) {
+          var slideNumberElement = document.createElement('footer');
+          slideNumberElement.classList.add('slide-number');
+          slideNumberElement.innerHTML = chapterIndex.toString() + (slideIndex > 0 ? ' - ' + slideIndex : '');
+          slide.appendChild(slideNumberElement);
+        }
+
+        function addCopyright(slide) {
+          var copyrightElement = document.createElement('footer');
+          copyrightElement.classList.add('copyright');
+          copyrightElement.innerHTML = '&copy; Copyright Zenika';
+          slide.appendChild(copyrightElement);
+        }
+
+        forEachSlide(addSlideNumber);
+        forEachSlide(addCopyright);
       });
 
     </script>

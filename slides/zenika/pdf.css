@@ -4,8 +4,5 @@
 .reveal .slides pre > code {
   font-family: "Inconsolata" !important; }
 
-.reveal .slide-number {
-  display: none; }
-
-.reveal footer {
+.reveal .fragment {
   display: none; }
