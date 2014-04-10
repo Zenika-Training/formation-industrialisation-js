@@ -116,7 +116,6 @@
         'use strict';
 
         function forEachSlide(action) {
-          var result = [];
           var forEach = Array.prototype.forEach;
           var chapters = document.querySelectorAll('.reveal .slides > section');
           forEach.call(chapters, function(chapter, chapterIndex) {
@@ -127,18 +126,21 @@
           });
         }
 
+        function footer(footerClass, footerContent) {
+          var footer = document.createElement('footer');
+          footer.classList.add(footerClass);
+          footer.innerHTML = footerContent;
+          return footer;
+        }
+
         function addSlideNumber(slide, chapterIndex, slideIndex) {
-          var slideNumberElement = document.createElement('footer');
-          slideNumberElement.classList.add('slide-number');
-          slideNumberElement.innerHTML = chapterIndex.toString() + (slideIndex > 0 ? ' - ' + slideIndex : '');
-          slide.appendChild(slideNumberElement);
+          slide.appendChild(footer(
+            'slide-number',
+            chapterIndex.toString() + (slideIndex > 0 ? ' - ' + slideIndex : '')));
         }
 
         function addCopyright(slide) {
-          var copyrightElement = document.createElement('footer');
-          copyrightElement.classList.add('copyright');
-          copyrightElement.innerHTML = '&copy; Copyright Zenika';
-          slide.appendChild(copyrightElement);
+          slide.appendChild(footer('copyright', '&copy; Copyright Zenika'));
         }
 
         forEachSlide(addSlideNumber);
