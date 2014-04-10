@@ -25,7 +25,7 @@
 
 &#8658; <!-- fat right arrow --> Gagne du temps et de l'argent
 
-- Les outils de build sont omniscients dans le monde Java avec Ant, Maven, et
+- Les outils de build sont omniprésents dans le monde Java avec Ant, Maven, et
 Gradle
 - De nombreuses plate-formes dispose de leur propre outil : make pour C et C++,
 MSBuild pour .net, Rake pour Ruby...
