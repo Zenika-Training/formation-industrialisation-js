@@ -22,29 +22,35 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: white; }
+  background: white;
+}
 
 .reveal {
   font-family: "Arial", sans-serif;
   font-size: 28px;
   font-weight: normal;
-  color: #333333; }
+  color: #333333;
+}
 
 .reveal .slides {
-  text-align: left; }
+  text-align: left;
+}
 
 .reveal .slides section,
 .reveal .slides section section {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 0 40px; }
+  padding: 0 40px;
+}
 
 .reveal .slides section section {
-  margin-left: -40px; }
+  margin-left: -40px;
+}
 
 .reveal.overview .slides section {
-  height: 650px; }
+  height: 650px;
+}
 
 .reveal .slides h2:after {
   content: url("images/zenika-logo-small.png");
@@ -54,12 +60,14 @@ body {
 }
 
 .reveal .slide-background {
-  background-size: contain; }
+  background-size: contain;
+}
 
 ::selection {
   color: white;
   background: #333333;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 /*********************************************
  * HEADERS
@@ -72,7 +80,8 @@ body {
   text-align: right;
   font-family: "Roboto Light", sans-serif; 
   font-size: 40px;
-  line-height: 130%; }
+  line-height: 130%;
+}
 
 .reveal h2,
 .reveal h3 {
@@ -84,29 +93,35 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: normal;
-  letter-spacing: 0.02em; }
+  letter-spacing: 0.02em;
+}
 
 .reveal h2 small,
 .reveal h3 small {
-  vertical-align: bottom; }
+  vertical-align: bottom;
+}
 
 /*********************************************
  * CONTENT
  *********************************************/
 .reveal li {
-  margin: 0.8em 0; }
+  margin: 0.8em 0;
+}
 
 .reveal strong {
   color: #b30c37;
   font-style: italic;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 .reveal em {
   color: #b30c37; 
-  font-style: normal; }
+  font-style: normal;
+}
 
 .reveal code {
-  color: #b30c37; }
+  color: #b30c37;
+}
 
 /*********************************************
  * CODE
@@ -115,18 +130,21 @@ body {
   margin: 15px 0;
   box-shadow: none; 
   border: 1px solid #b30c37; 
-  border-left: 5px solid #b30c37; }
+  border-left: 5px solid #b30c37;
+}
 
 .reveal h2 + pre,
 .reveal h3 + pre { /* Whole-slide code block */
-  border: none; }
+  border: none;
+}
 
 .reveal pre > code {
   color: black; 
   max-height: none;
   font-family: "Inconsolata", monospace;
   font-size: 24px; 
-  line-height: normal; }
+  line-height: normal;
+}
 
 /*********************************************
  * LINKS
@@ -138,72 +156,89 @@ body {
   -moz-transition: color .15s ease;
   -ms-transition: color .15s ease;
   -o-transition: color .15s ease;
-  transition: color .15s ease; }
+  transition: color .15s ease;
+}
 
 .reveal a:not(.image):hover {
   color: #b30c37;
   text-shadow: none;
-  border: none; }
+  border: none;
+}
 
 .reveal .roll span:after {
   color: white;
-  background: #b30c37; }
+  background: #b30c37;
+}
 
 .reveal .slides .toc a {
-  color: inherit; }
+  color: inherit;
+}
 
 /*********************************************
  * IMAGES
  *********************************************/
 .reveal section img {
   display: block;
-  margin: 30px auto; }
+  margin: 30px auto;
+}
 
 .reveal section img.with-border {
-  border: 1px solid black; }
+  border: 1px solid black;
+}
 
 .reveal section img #questions {
-  margin-top: 100px; }
+  margin-top: 100px;
+}
 
 .reveal figcaption {
-  text-align: center; }
+  text-align: center;
+}
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #b30c37; }
+  border-right-color: #b30c37;
+}
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #b30c37; }
+  border-left-color: #b30c37;
+}
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #b30c37; }
+  border-bottom-color: #b30c37;
+}
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #b30c37; }
+  border-top-color: #b30c37;
+}
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #b30c37; }
+  border-right-color: #b30c37;
+}
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #b30c37; }
+  border-left-color: #b30c37;
+}
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #b30c37; }
+  border-bottom-color: #b30c37;
+}
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #b30c37; }
+  border-top-color: #b30c37;
+}
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.2);
+}
 
 .reveal .progress span {
   background: #b30c37;
@@ -211,7 +246,8 @@ body {
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
 
 /*********************************************
  * FOOTER (style copied from reveal.css -> .reveal .slide-number)
@@ -220,17 +256,20 @@ body {
   position: absolute;
   bottom: 15px;
   font-size: 12px;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .reveal .master-toc-return {
   left: 15px;
   bottom: 15px;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .reveal .copyright {
   left: 0px;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+}
 
 /*********************************************
  * ALERTS (taken from bootstrap)
@@ -241,31 +280,38 @@ body {
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px; 
-  font-size: 24px; }
+  font-size: 24px;
+}
 
 .reveal .alert em {
   color: inherit; 
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .reveal .alert code {
-  color: inherit; }
+  color: inherit;
+}
 
 .reveal .alert-success {
   color: #3c763d;
   background-color: #dff0d8;
-  border-color: #d6e9c6; }
+  border-color: #d6e9c6;
+}
 
 .reveal .alert-info {
   color: #31708f;
   background-color: #d9edf7;
-  border-color: #bce8f1; }
+  border-color: #bce8f1;
+}
 
 .reveal .alert-warning {
   color: #8a6d3b;
   background-color: #fcf8e3;
-  border-color: #faebcc; }
+  border-color: #faebcc;
+}
 
 .reveal .alert-danger {
   color: #a94442;
   background-color: #f2dede;
-  border-color: #ebccd1; }
+  border-color: #ebccd1;
+}
