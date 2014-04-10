@@ -19,18 +19,17 @@
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
-      if( window.location.search.match( /print-pdf/gi ) ) {
-        var revealpdf = document.createElement( 'link' );
-        revealpdf.rel = 'stylesheet';
-        revealpdf.type = 'text/css';
-        revealpdf.href = 'reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( revealpdf );
-        var zenikapdf = document.createElement( 'link' );
-        zenikapdf.rel = 'stylesheet';
-        zenikapdf.type = 'text/css';
-        zenikapdf.href = 'zenika/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( zenikapdf );
+      function addStylesheetWhenUrlMatches(regexp, stylesheet) {
+        if (window.location.search.match(regexp)) {
+          var linkElement = document.createElement( 'link' );
+          linkElement.rel = 'stylesheet';
+          linkElement.type = 'text/css';
+          linkElement.href = stylesheet;
+          document.getElementsByTagName('head')[0].appendChild(linkElement);
+        }
       }
+      addStylesheetWhenUrlMatches(/print-pdf/gi, 'reveal.js/css/print/pdf.css');
+      addStylesheetWhenUrlMatches(/print-pdf/gi, 'zenika/pdf.css');
     </script>
 
     <!--[if lt IE 9]>
