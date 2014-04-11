@@ -136,7 +136,7 @@
         function addSlideNumber(slide, chapterIndex, slideIndex) {
           slide.appendChild(footer('slide-number', function() {
             if (chapterIndex == 0) return '';
-            if (slideIndex == 0) return '';
+            if (slideIndex == 0) return chapterIndex.toString();
             return chapterIndex.toString() + ' - ' + slideIndex.toString();
           }())); 
         }
