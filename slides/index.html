@@ -141,7 +141,8 @@
           }())); 
         }
 
-        function addCopyright(slide) {
+        function addCopyright(slide, chapterIndex, slideIndex) {
+          if (slideIndex == 0) return;
           slide.appendChild(footer('copyright', '&copy; Copyright Zenika'));
         }
 
