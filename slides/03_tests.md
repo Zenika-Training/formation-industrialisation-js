@@ -84,28 +84,28 @@ console.log(une_accolade_par_ci())
 console.log(une_accolade_par_là())
 ```
 
-<!-- .element: class="fragment alert alert-success" style="position: fixed; top: 125px; right: 10px; width: 360px;" --> 
+<!-- .element: class="fragment alert alert-success" style="position: absolute; top: 125px; right: 10px; width: 360px;" --> 
 On l'envoit en production ?
 
-<!-- .element: class="fragment alert alert-info" style="position: fixed; top: 195px; right: 10px; width: 360px;" --> 
+<!-- .element: class="fragment alert alert-info" style="position: absolute; top: 195px; right: 10px; width: 360px;" --> 
 Ce code s'exécute sans erreurs !<br/> Il affiche `undefined` deux fois.
 
-<!-- .element: class="fragment alert alert-warning" style="position: fixed; top: 295px; right: 10px; width: 360px;" -->
+<!-- .element: class="fragment alert alert-warning" style="position: absolute; top: 295px; right: 10px; width: 360px;" -->
 Qu'en dit JSHint ?
 
-<!-- .element: class="fragment alert alert-danger" style="position: fixed; top: 365px; right: 10px; width: 360px;" -->
+<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 365px; right: 10px; width: 360px;" -->
 Var. utilisée avant sa déclaration
 
-<!-- .element: class="fragment alert alert-danger" style="position: fixed; top: 435px; right: 190px; width: 180px;" --> 
+<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 435px; right: 190px; width: 180px;" --> 
 `var` qui manque
 
-<!-- .element: class="fragment alert alert-danger" style="position: fixed; top: 435px; right: 10px; width: 140px;" --> 
+<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 435px; right: 10px; width: 140px;" --> 
 `==` douteux
 
-<!-- .element: class="fragment alert alert-danger" style="position: fixed; top: 505px; right: 10px; width: 360px;" -->
+<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 505px; right: 10px; width: 360px;" -->
 Faute de frappe
 
-<!-- .element: class="fragment alert alert-danger" style="position: fixed; top: 575px; right: 10px; width: 360px;" -->
+<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 575px; right: 10px; width: 360px;" -->
 Retour à la ligne malencontreux
 
 Notes :

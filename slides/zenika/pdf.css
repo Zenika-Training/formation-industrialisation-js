@@ -24,10 +24,6 @@ body {
   font-family: "Inconsolata" !important;
 }
 
-.reveal .fragment {
-  display: none;
-}
-
 .reveal .master-toc-return {
   display: none;
 }
