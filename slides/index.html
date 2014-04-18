@@ -84,6 +84,7 @@
 
     <script src="reveal.js/lib/js/head.min.js"></script>
     <script src="reveal.js/js/reveal.min.js"></script>
+    <script src="reveal.js/plugin/sockets-notes/server/src/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.min.js"></script>
 
     <script>
 
@@ -108,7 +109,10 @@
           { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/sockets-notes/reveal_plugin/src/js/notes-client.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/sockets-notes/reveal_plugin/src/plugins/sws-plugin-remote-pointer.js', async: true, condition: function() { return !!document.body.classList; } }
+
         ]
       });
 
