@@ -6,7 +6,8 @@ module.exports = function(grunt) {
                 base: './slides/',
                 open: true,
                 hostname: 'localhost',
-                port: 9009,
+                port: 8000,
+                livereload: 32729
             },
             server: {},
             keepalive: {
@@ -15,7 +16,7 @@ module.exports = function(grunt) {
         },
         watch: {
             options: {
-                livereload: true,
+                livereload: 32729,
             },
             content: {
                 files: 'slides/*.md',
@@ -43,6 +44,8 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['connect:server', 'watch']);
+
+    grunt.registerTask('serve', ['connect:server', 'watch']);
+    grunt.registerTask('default', ['serve']);
 
 };

@@ -11,7 +11,7 @@ node reveal.js/plugin/sockets-notes/server/src/server.js -d true -r reveal.js -p
 ```
 *Note*: ce mode est encore en béta, voir les pré-requis d'installation plus bas.
 
-Alternativement, vous pouvez lancer un serveur web avec *Grunt*, avec le mode **livereload**, pour la prise en compte automatique des modifications lors de l'édition : `npm install && grunt`
+Alternativement, vous pouvez lancer un serveur web avec *Grunt*, avec le mode **livereload**, pour la prise en compte automatique des modifications lors de l'édition, installer les dépendances avec `npm install` et lancer le serveur avec `grunt` ou `grunt serve`.
 
 A ce jour, **les slides ont seulement été testées avec Chrome !** Firefox ne centre pas le contenu correctement.
 
