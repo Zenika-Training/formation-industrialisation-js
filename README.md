@@ -5,23 +5,33 @@
 - Ouvrir Chrome sur `http://localhost:8000`
 - Vous arriverez sur le chapitre zéro, slide une, c'est-à-dire la page de garde de la formation
 
+Pour activer le mode présentateur sur le mobile, il faut lancer le server : 
+```
+node reveal.js/plugin/sockets-notes/server/src/server.js -d true -r reveal.js -p 8000
+```
+*Note*: ce mode est encore en béta, voir les pré-requis d'installation plus bas.
+
 Alternativement, vous pouvez lancer un serveur web avec *Grunt*, avec le mode **livereload**, pour la prise en compte automatique des modifications lors de l'édition : `npm install && grunt`
 
 A ce jour, **les slides ont seulement été testées avec Chrome !** Firefox ne centre pas le contenu correctement.
 
 ## Navigation
 
+- Espace permet d'aller au slide suivant
 - Flèches haut et bas pour naviguer au sein du chapitre
 - Flèches gauche et droite pour naviguer entre les chapitres
 - Les slides Plan sont faites de liens pour sauter directement aux différents chapitres
 - La petite flèche en bas à gauche revient à la slide Plan maitresse (chapitre zéro, slide deux)
 - Les fonctions précédent et suivant du navigateur fonctionne normalement
 
-## Fonctions avancées
+## Raccourcis clavier
 
-- La touche `o` donne accès à une vue avec du recul sur les slides
-- La touche `s` active le mode présentateur : une nouvelle fenêtre s'ouvre avec slide en cours, slide suivante, temps écoulé, notes
-- La touche `b` "éteind" la présentation, afin que les participants se concentre sur le présentateur
+- `espace` passe au slide suivant
+- `haut/bas/gauche/droite` navigue dans les slides
+- `o` donne accès à une vue avec du recul sur les slides
+- `s` active le mode présentateur : une nouvelle fenêtre s'ouvre avec slide en cours, slide suivante, temps écoulé, notes
+- `b` "éteind" la présentation, afin que les participants se concentre sur le présentateur
+- `Ctrl-q` affiche un QRCode pour accèder au mode mobile plus facilement (il faut au préablable choisir le réseau)
 
 ## Exporter en PDF
 
@@ -34,6 +44,19 @@ A ce jour, **les slides ont seulement été testées avec Chrome !** Firefox ne 
   - Marges : Aucun
 - Enregistrer le PDF
 
+## Mode présentateur sur mobile
+
+### Pré-requis
+
+Le plugin étant encore en béta [Voir repo github](https://github.com/VinsiInnovation/revealjs-sockets-notes), 
+il est nécessaire de récupérer les dépendances. Pour cela, aller dans le répertoire `slides/reveal.js/plugin/sockets-notes` et lancer la commande `build-dev.sh` ou `build-dev.bat`.
+
+### Utilisation
+
+Scannez le QRCode ou aller sur l'URL affichée afin d'ouvrir le mode présentateur sur mobile.
+Ce mode présentateur affiche les notes présentateur et la slide suivante.
+En cliquant sur le bouton, on affiche le slide suivant.
+Slidant permet de naviguer uniquement sur le mobile. Le bouton permet alors d'afficher la slide en cours de naviguation.
 
 # Rédiger ou éditer des slides
 
