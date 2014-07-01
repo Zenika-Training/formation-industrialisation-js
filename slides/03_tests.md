@@ -36,9 +36,9 @@ données.
 ## Analyse statique
 
 <figure>
-    <img 
-      src="assets/images/jshint-logo.png" 
-      alt="JSHint logo"  
+    <img
+      src="assets/images/jshint-logo.png"
+      alt="JSHint logo"
       width="50%"
       style="margin-top: 20%"/>
 </figure>
@@ -84,10 +84,10 @@ console.log(une_accolade_par_ci())
 console.log(une_accolade_par_là())
 ```
 
-<!-- .element: class="fragment alert alert-success" style="position: absolute; top: 125px; right: 10px; width: 360px;" --> 
+<!-- .element: class="fragment alert alert-success" style="position: absolute; top: 125px; right: 10px; width: 360px;" -->
 On l'envoit en production ?
 
-<!-- .element: class="fragment alert alert-info" style="position: absolute; top: 195px; right: 10px; width: 360px;" --> 
+<!-- .element: class="fragment alert alert-info" style="position: absolute; top: 195px; right: 10px; width: 360px;" -->
 Ce code s'exécute sans erreurs !<br/> Il affiche `undefined` deux fois.
 
 <!-- .element: class="fragment alert alert-warning" style="position: absolute; top: 295px; right: 10px; width: 360px;" -->
@@ -96,10 +96,10 @@ Qu'en dit JSHint ?
 <!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 365px; right: 10px; width: 360px;" -->
 Var. utilisée avant sa déclaration
 
-<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 435px; right: 190px; width: 180px;" --> 
+<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 435px; right: 190px; width: 180px;" -->
 `var` qui manque
 
-<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 435px; right: 10px; width: 140px;" --> 
+<!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 435px; right: 10px; width: 140px;" -->
 `==` douteux
 
 <!-- .element: class="fragment alert alert-danger" style="position: absolute; top: 505px; right: 10px; width: 360px;" -->
@@ -119,12 +119,12 @@ erreur ? Afficher quelque chose dans la console ?
 - Les `var` qui manquent devant `une autre variable` et `la_même` rendent ces
 variables globales
 - `variable` est déclarée après son utilisation, et est donc `undefined` à ce
-moment là, mais l'interpréteur n'a pas de problème pour calculer 
+moment là, mais l'interpréteur n'a pas de problème pour calculer
 `2 * undefined` (ça retourne `undefined`)
 - Le `==` retourne `true` quand il compare `0` et `[]` car ces deux valeurs
 sont équivalentes à faux.
 - `console` est mal orthographié mais il n'y a pas d'erreur parce que cette ligne n'est jamais exécutée
-- A cause du retour à la ligne après `return`, l'interpréteur insère un 
+- A cause du retour à la ligne après `return`, l'interpréteur insère un
 point-virgule et la fonction retourne `undefined`. L'objet qui suit est
 ignoré et les erreurs de syntaxe qu'il contient aussi.
 
@@ -222,7 +222,7 @@ Notes :
 - L'exemple décrit un perroquet qui dispose d'une méthode `onTold` pour lui
 parler et d'une méthode `repeat` pour lui faire répéter ce qu'on lui a dit. Le
 test vérifie simplement que ce qu'il répète est bien ce qu'on lui a dit.
-- Si les participants sont Java-istes : `describe` correspond à une classe, 
+- Si les participants sont Java-istes : `describe` correspond à une classe,
 `it` à une méthode.
 
 
@@ -235,12 +235,12 @@ describe('a parrot', function() {
   var sut = parrot();
   var message = 'hello!';
 
-  beforeEach(function() { 
-    sut.onPet(); 
+  beforeEach(function() {
+    sut.onPet();
   });
 
-  afterEach(function() { 
-    sut.onFed(); 
+  afterEach(function() {
+    sut.onFed();
   });
 
   it("repeats what it's told", function () {
@@ -264,8 +264,8 @@ describe('a parrot', function() {
   var sut = parrot();
   var message = 'hello!';
 
-  beforeEach(function() { 
-    spyOn(sut, 'onTold'); 
+  beforeEach(function() {
+    spyOn(sut, 'onTold');
   });
 
   it("can be spied on", function () {
@@ -283,7 +283,7 @@ describe('a parrot', function() {
 - Dans un navigateur
   - Ecrire une page HTML qui importe Jasmine, le code à tester, les tests
   - Ouvrir la page dans le navigateur de référence
-  - Une telle page est fourni avec Jasmine, il faut simplement modifier les 
+  - Une telle page est fourni avec Jasmine, il faut simplement modifier les
   `script[src]`
 - Dans Node, à l'aide du projet `jasmine-node` (Jasmine 1.3)
   - `npm install -g jasmine-node`
@@ -309,9 +309,9 @@ describe('a parrot', function() {
 ## Automatisation des tests unitaires
 
 <figure>
-    <img 
-      src="assets/images/karma-logo.png" 
-      alt="Karma logo"  
+    <img
+      src="assets/images/karma-logo.png"
+      alt="Karma logo"
       width="60%"
       style="margin-top: 20%"/>
     <figcaption>Spectacular Test Runner for Javascript</figcaption>
@@ -347,7 +347,7 @@ describe('a parrot', function() {
 ```javascript
 module.exports = function(config) {
   config.set({
-    frameworks: ['jasmine'], 
+    frameworks: ['jasmine'],
 
     files: [ // Inclus le code à tester
       'src/*.js',
@@ -357,7 +357,7 @@ module.exports = function(config) {
     browsers: ['Chrome', 'Firefox'],
 
     // Relancer les tests à chaque modification d'un fichier
-    autoWatch: true, 
+    autoWatch: true,
 
     // Une seule passe de test
     singleRun: false,
@@ -391,74 +391,8 @@ module.exports = function(config) {
 
 ## Couverture de test
 
-<img src="assets/images/coverage-example.png" alt="Test Coverage Example" 
+<img src="assets/images/coverage-example.png" alt="Test Coverage Example"
 width="90%" class="with-border"/>
-
-
-
-## Tests bout-en-bout
-
-<figure>
-    <img 
-      src="assets/images/angular-logo.png" 
-      alt="Angular logo"  
-      width="35%"
-      style="margin-top: 10%"/>
-    <figcaption>Protractor: E2E test framework for Angular apps</figcaption>
-</figure>
-
-
-
-## Protractor
-
-- Module Node créé par l'équipe AngularJS
-- Basé sur Selenium
-  - Tests par automation du navigateur
-  - Nécessite un serveur Selenium
-  - Reprend le style de l'API Selenium en ajoutant des spécificités Angular
-- API pour les tests : Jasmine ou Mocha
-
-
-
-## Mise en route
-
-- `npm install -g protractor`
-- `webdriver-manager update` + `webdriver-manager start` pour installer et
-lancer un serveur Selenium
-- `protractor protractor.conf.js`
-
-```javascript
-exports.config = {
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-  capabilities: {
-    'browserName': 'firefox'
-  },
-  specs: ['spec.js'],
-};
-```
-
-
-
-## Exemple de test
-
-```javascript
-describe('angularjs homepage', function() {
-
-  it('should greet the named user', function() {
-    browser.get('http://www.angularjs.org');
-
-    // Cherche les input avec ng-model=yourName
-    element(by.model('yourName')).sendKeys('Zenika');
-
-    // Cherche les éléments bindés à yourName
-    // Exemple : <h1>Hello \{{yourName}}</h1>
-    var greeting = element(by.binding('yourName'));
-
-    expect(greeting.getText()).toEqual('Hello Zenika!');
-  });
-
-});
-```
 
 
 
