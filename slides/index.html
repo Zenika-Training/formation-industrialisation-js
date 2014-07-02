@@ -44,32 +44,38 @@
 
       <div class="slides">
 
-        <section 
-          data-markdown="00_agenda.md"  
+        <section
+          data-markdown="00_agenda.md"
           data-vertical="^\r?\n\r?\n\r?\n"
           data-notes="^Notes :">
         </section>
 
-        <section 
+        <section
           data-markdown="01_build.md"
           data-vertical="^\r?\n\r?\n\r?\n"
           data-notes="^Notes :">
         </section>
 
-        <section 
+        <section
           data-markdown="02_dependency_management.md"
           data-vertical="^\r?\n\r?\n\r?\n"
           data-notes="^Notes :">
         </section>
 
-        <section 
+        <section
           data-markdown="03_tests.md"
           data-vertical="^\r?\n\r?\n\r?\n"
           data-notes="^Notes :">
         </section>
 
-        <section 
+        <section
           data-markdown="04_productivity.md"
+          data-vertical="^\r?\n\r?\n\r?\n"
+          data-notes="^Notes :">
+        </section>
+
+        <section
+          data-markdown="06_debugging.md"
           data-vertical="^\r?\n\r?\n\r?\n"
           data-notes="^Notes :">
         </section>
@@ -142,7 +148,7 @@
             if (chapterIndex == 0) return '';
             if (slideIndex == 0) return chapterIndex.toString();
             return chapterIndex.toString() + ' - ' + slideIndex.toString();
-          }())); 
+          }()));
         }
 
         function addCopyright(slide, chapterIndex, slideIndex) {
