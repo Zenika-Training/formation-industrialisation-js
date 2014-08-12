@@ -91,9 +91,88 @@ sut le Chrome Web Store
 
 
 
+## Frameworks CSS
+
+- Ces framework proposent
+  - Un système de grille responsive pour la mise en page
+  - Des styles pour le typographie
+  - Des composants préparés (boutons, onglets...)
+- Le plus populaire : Bootstrap
+  - http://getbootstrap.com
+- Des challengers : Foundation, UI Kit, ...
+
+
+
+## Grille responsive Bootstrap
+
+- Grille à 12 colonnes
+- S'il y a plus de 12 colonnes, le contenu passent à la ligne
+- Du contenu peut prendre un nombre différent de colonnes dépendant de la largeur de l'écran
+- Bootstrap divise les tailles d'écran en 4 catégories
+  - `xs` en-dessous de 768px exclus
+  - `sm` en-dessous de 992px exclus
+  - `md` en-dessous de 1200px exclus
+  - `lg` au-dessus de 1200px inclus
+
+
+
+## Grille responsive Bootstrap : exemple
+
+```html
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8"></div>
+  <div class="col-xs-6 col-md-4"></div>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-sm-4"></div>
+  <div class="col-xs-6 col-sm-4"></div>
+  <div class="col-xs-6 col-sm-4"></div>
+</div>
+```
+
+
+
+## Grille responsive Bootstrap : exemple
+
+<figure>
+  <img
+    src="assets/images/bootstrap-grid-lg.png"
+    alt="Grille bootstrap vue sur un écran large (PC)"
+    width="80%"/>
+  <figcaption>Vue sur un écran large (PC)</figcaption>
+</figure>
+
+<figure>
+  <img
+    src="assets/images/bootstrap-grid-xs.png"
+    alt="Grille bootstrap vue sur un écran étroit (téléphone)"
+    width="80%"/>
+  <figcaption>Vue sur un écran étroit (téléphone)</figcaption>
+</figure>
+
+
+
+## Composants UI Kit
+
+<img
+  src="assets/images/uikit.png"
+  alt="Composants UI Kit"
+  width="80%"/>
+
+
+
+## Composants UI Kit
+
+<img
+  src="assets/images/uikit2.png"
+  alt="Composants UI Kit"
+  width="80%"/>
+
+
+
 ## Les méta-langages
 
-- Méta-langages Javascript
+- Méta-langages JavaScript
   - CoffeeScript
   - TypeScript
   - Dart
