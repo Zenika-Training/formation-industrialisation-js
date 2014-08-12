@@ -244,6 +244,62 @@ var greeter = new Greeter("world");
 
 
 
+## Dart
+
+- Nouveau langage complet developpé par Google
+- Client ou serveur
+- Compilation vers JavaScript
+- Outillage
+  - IDE
+  - Package Manager
+- Port des frameworks Google
+  - Polymer
+  - Angular
+
+
+
+## Dart
+
+- Typage optionnel
+- Classes, interfaces, héritage, modules...
+
+```dart
+int fib(int n) => (n > 1) ? (fib(n - 1) + fib(n - 2)) : 1;
+
+void main() {
+    print('fib(20) = ${fib(20)}');
+}
+```
+
+
+
+## Dart
+
+```dart
+import 'dart:math' as math;
+class Point {
+    final num x, y;
+
+    Point(this.x, this.y);
+    Point.origin() : x = 0, y = 0;
+
+    num distanceTo(Point other) {
+        var dx = x - other.x;
+        var dy = y - other.y;
+        return math.sqrt(dx * dx + dy * dy);
+    }
+}
+
+void main() {
+    var p1 = new Point(10, 10);
+    var p2 = new Point.origin();
+    var distance = p1.distanceTo(p2);
+    print(distance);
+}
+```
+
+
+
 ## Sass
 
 - http://sass-lang.com
