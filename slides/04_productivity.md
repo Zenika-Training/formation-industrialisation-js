@@ -94,11 +94,11 @@ sut le Chrome Web Store
 ## Les méta-langages
 
 - Méta-langages Javascript
-  - *CoffeeScript*
-  - *TypeScript*
+  - CoffeeScript
+  - TypeScript
   - Dart
 - Méta-langages CSS
-  - *Sass*
+  - Sass
   - Less
 
 
@@ -304,6 +304,7 @@ void main() {
 
 - http://sass-lang.com
 - Syntactically Awesome Style Sheets
+- Concurrent très proche : LESS (http://lesscss.org/)
 
 
 
