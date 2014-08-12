@@ -100,10 +100,7 @@
 
 ## Surveillance du réseau dans Chrome 35
 
-![Surveillance du réseau](assets/images/network.png)
-
-
-
-## Surveillance du réseau dans Chrome 35
-
 ![Surveillance du réseau](assets/images/network_timeline.png)
+
+
+
