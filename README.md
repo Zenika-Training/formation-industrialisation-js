@@ -1,3 +1,7 @@
+# Formation Industrialisation JS
+
+[Doc Zenika](https://docs.google.com/a/zenika.com/document/d/1x2bUtzUUr_Bz4Ar-1Y_0KY9C9hxqUHh9C7DLFd592zk/edit)
+
 # Consulter les slides
 
 - Aller dans le répertoire slides
