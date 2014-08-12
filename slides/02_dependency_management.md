@@ -201,6 +201,36 @@ build
 
 
 
+## Browserify
+
+<figure style="margin-top: 10%">
+  <img src="assets/images/browserify.png" alt="Browserify hat"  width="30%"/>
+  <img src="assets/images/browserify2.png" alt="Browserify logo"  width="40%"/>
+</figure>
+
+
+
+## Browserify
+
+- Permet d'écrire des modules CommonJS comme en Node.js
+
+```js
+var module = require('module')
+module.fonction(1, 2, 3)
+```
+
+- Les modules tiers sont installables avec NPM
+- On compile ensuite le tout avec la commande `browserify`
+
+```
+browserify main.js -o bundle.js
+```
+
+- On obtient un unique fichier `bundle.js` à importer dans une page HTML
+- Tous les modules utilisés par `main.js` (récursivement) sont inclus
+
+
+
 <!-- .slide: data-background="zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->
 
