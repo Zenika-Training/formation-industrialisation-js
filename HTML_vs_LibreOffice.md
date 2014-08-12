@@ -1,16 +1,16 @@
 # HTML vs LibreOffice
 
-Comparaison de ce système de slide HTML5 par rapport au système classique LibreOffice, en suivant chaque contrainte de Zenika.
+Comparaison de ce système de slides HTML5 par rapport au système classique LibreOffice, en suivant chaque contrainte de Zenika.
 
 ## SCM friendlyness
 
-Fini les fichiers binaires impossible à differ. Avec les slides HTML, tout est en texte clair, et les fichiers sont beaucoup plus léger.
+Fini les fichiers binaires impossible à differ. Avec les slides HTML, tout est en texte clair, et les fichiers sont beaucoup plus légers.
 
 ## Installation *bulletproof*
 
 ### HTML
 
-Les seuls logiciels nécessaires sont déjà installés sur tous les postes : Chrome et un éditeur de texte. Même Notepad peut faire l'affaire. Non seulement ces programmes sont extrêmement répandu mais en plus ils sont très léger et rapides. Tout le reste est embarqué sur le repository Git et fonctionne immédiatement. Si nécessaire, et avec un peu de travail, plus de navigateurs peuvent être rendu compatibles.
+Les seuls logiciels nécessaires sont déjà installés sur tous les postes : Chrome et un éditeur de texte. Même Notepad peut faire l'affaire. Non seulement ces programmes sont extrêmement répandus mais en plus ils sont très légers et rapides. Tout le reste est embarqué sur le repository Git et fonctionne immédiatement. Si nécessaire, et avec un peu de travail, plus de navigateurs peuvent être rendu compatibles.
 
 ### LibreOffice
 
@@ -35,7 +35,7 @@ HTML ne peut pas concurrencer LibreOffice sur ce point. Cependant, avec LiveRelo
 
 ## Génération d'un PDF propre
 
-Les PDF générés par Reveal.js sont très propres et utilisable pour l'impression, mais pas aussi propre que ceux de LibreOffice, puisqu'il subsiste des marges blanches tout autour du contenu. On peut noter aussi l'absence de pieds de page avec copyright et numérotation des pages. Ces points sont cependant potentiellement résolvables avec un peu de recherche et de travail. Une piste [ici](https://gist.github.com/bollwyvl/5355231). Un avantage des slides HTML est que le PDF peut se générer en une seule fois, alors que pour LibreOffice il faut ouvrir chaque chapitre et exporter. A terme il est même potentiellement possible de générer les PDF via un script automatisé.
+Les PDF sont très propres dans les deux cas. Un avantage des slides HTML est que le PDF peut se générer en une seule fois, alors que pour LibreOffice il faut ouvrir chaque chapitre et exporter. A terme il est même potentiellement possible de générer les PDF via un script automatisé.
 
 
 ## Environnement 100% local
@@ -48,7 +48,7 @@ A voir dans le temps.
 
 ## Optionnel : Migration simple des formations existantes
 
-Pas de solution triviale pour migrer de LibreOffice vers HTML, mais c'est la faute de LibreOffice ;). Il faudrait utiliser une librairie qui puissent manipuler les présentations OpenDocument, extraire le contenu et le formater en markdown.
+Pas de solution triviale pour migrer de LibreOffice vers HTML, mais c'est la faute de LibreOffice. Il faudrait utiliser une librairie qui puissent manipuler les présentations OpenDocument, extraire le contenu et le formater en markdown.
 
 Dans tous les cas, les formations HTML gagne haut la main en terme d'interopérabilité : si un jour on veut remplacer Reveal.js par un autre framework, alors le contenu n'en sera aucunement affecté puisqu'il est séparé dans des fichiers markdown à part. A l'opposé, les fichiers produit pas LibreOffice ne sont pas utilisable dans des logiciels similaires comme Powerpoint.
 
