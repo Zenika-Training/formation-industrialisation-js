@@ -54,6 +54,12 @@
 
 
 
+## Console REPL dans Chrome 36
+
+![Console REPL](assets/images/console.png)
+
+
+
 ## Debugger
 
 - Exécuter le code pas à pas
@@ -104,3 +110,5 @@
 
 
 
+<!-- .slide: data-background="zenika/images/questions.png" -->
+<!-- .slide: data-background-size="30%" -->
