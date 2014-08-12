@@ -9,7 +9,7 @@
 - Ouvrir Chrome sur `http://localhost:8000`
 - Vous arriverez sur le chapitre zéro, slide une, c'est-à-dire la page de garde de la formation
 
-Pour activer le mode présentateur sur le mobile, il faut lancer le server : 
+Pour activer le mode présentateur sur le mobile, il faut lancer le server :
 ```
 node reveal.js/plugin/sockets-notes/server/src/server.js -d true -r reveal.js -p 8000
 ```
@@ -52,7 +52,7 @@ A ce jour, **les slides ont seulement été testées avec Chrome !** Firefox ne 
 
 ### Pré-requis
 
-Le plugin étant encore en béta [Voir repo github](https://github.com/VinsiInnovation/revealjs-sockets-notes), 
+Le plugin étant encore en béta [Voir repo github](https://github.com/VinsiInnovation/revealjs-sockets-notes),
 il est nécessaire de récupérer les dépendances. Pour cela, aller dans le répertoire `slides/reveal.js/plugin/sockets-notes` et lancer la commande `build-dev.sh` ou `build-dev.bat`.
 
 ### Utilisation
@@ -76,13 +76,13 @@ Reveal est capable de convertir le markdown en HTML à la volée, il n'y a donc 
 
 Pour modifier la liste de fichiers chargés, éditer `index.html`. La partie centrale comprend un élément `section` par fichier. Il suffit de créer, modifier, déplacer, ou supprimer ces éléments.
 
-Exemple: 
+Exemple:
 
 ```html
 <div class="slides">
 
-  <section 
-    data-markdown="00_agenda.md"  
+  <section
+    data-markdown="00_agenda.md"
     data-vertical="^\r?\n\r?\n\r?\n"
     data-notes="^Notes :">
   </section>
@@ -158,10 +158,10 @@ Les pages de questions n'ont pas de titre et le fond `questions.png` avec une ta
 - Pour les images, écrire du HTML classique. La taille peut être modifié via l'attribut `width`, et la position en modifiant les marges. La classe `.with-border` active une fine bordure noire autour de l'image.
 
 ```html
-<img 
-  src="assets/images/image.png" 
-  alt="Une image" 
-  width="90%" 
+<img
+  src="assets/images/image.png"
+  alt="Une image"
+  width="90%"
   style="margin-top: 10%"
   class="with-border"/>
 ```
@@ -170,8 +170,8 @@ Les pages de questions n'ont pas de titre et le fond `questions.png` avec une ta
 
 ```html
 <figure>
-    <img 
-      src="assets/images/image.png" 
+    <img
+      src="assets/images/image.png"
       alt="Une image"/>
     <figcaption>Une superbe représentation de quelque chose</figcaption>
 </figure>
