@@ -20,9 +20,9 @@
 ## LiveReload
 
 <figure>
-    <img 
-      src="assets/images/livereload-logo.png" 
-      alt="Karma logo"  
+    <img
+      src="assets/images/livereload-logo.png"
+      alt="Karma logo"
       width="40%"
       style="margin-top: 10%"/>
     <figcaption>A happy land where browsers don't need a Refresh button.</figcaption>
@@ -77,15 +77,15 @@ Notes :
 
 - Extensions Firefox et Safari disponibles sur livereload.com
   - Pas d'accès aux fichiers locaux pour Safari
-- Extension Chrome [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) 
+- Extension Chrome [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 sut le Chrome Web Store
   - Cocher *Autoriser l'accès aux URL de fichier* dans les paramètres de
   l'extension pour pouvoir l'utiliser avec des fichiers locaux
   - Il faut activer l'extension en cliquant dessus pour chaque page que l'on veut voir rechargée
 
-<img 
-  src="assets/images/livereload-chrome-activated.png" 
-  alt="LiveReload extension in chrome"  
+<img
+  src="assets/images/livereload-chrome-activated.png"
+  alt="LiveReload extension in chrome"
   width="20%"
   class="with-border"/>
 
@@ -112,16 +112,16 @@ sut le Chrome Web Store
 
 
 
-## CoffeeScript 
+## CoffeeScript
 
-- `var` ainsi que certaines parenthèses, accolades et virgules sont 
+- `var` ainsi que certaines parenthèses, accolades et virgules sont
 optionnels
 
 ```coffeescript
 newObj = Object.create 'CoffeeScript'
 ```
 ```coffeescript
-computer = 
+computer =
     vendor: 'Zenika'
     cpu: 3200
     ram: 8192
@@ -135,7 +135,7 @@ hour24 = if ampm is 'AM' then hour12 else hour12 + 12
 
 
 
-## CoffeeScript 
+## CoffeeScript
 
 - Opérateur d'existence
 
@@ -177,7 +177,7 @@ class Snake extends Animal
 
 
 
-## CoffeeScript 
+## CoffeeScript
 
 - List comprehensions et intervalles
 
