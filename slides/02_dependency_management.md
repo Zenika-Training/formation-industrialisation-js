@@ -30,8 +30,8 @@
 ## NPM
 
 <figure style="margin-top: 20%">
-    <img src="assets/images/npm-logo.png" alt="NPM logo"  width="40%"/>
-    <figcaption>The Node Package Manager</figcaption>
+  <img src="assets/images/npm-logo.png" alt="NPM logo"  width="40%"/>
+  <figcaption>The Node Package Manager</figcaption>
 </figure>
 
 
@@ -103,7 +103,7 @@ présent
 
 
 
-## Commandes 
+## Commandes
 
 - L'option `--global` ou `-g` de `npm install <package>` installe la dépendance globalement. Ce n'est utile que pour les outils qui fournissent une
 interface en ligne de commande que l'ont veut disponible partout.
@@ -128,8 +128,8 @@ développement dans le navigateur
 ## Bower
 
 <figure>
-    <img src="assets/images/bower-logo.png" alt="Bower logo"  width="40%"/>
-    <figcaption>A package manager for the web</figcaption>
+  <img src="assets/images/bower-logo.png" alt="Bower logo"  width="40%"/>
+  <figcaption>A package manager for the web</figcaption>
 </figure>
 
 
