@@ -57,8 +57,9 @@ MSBuild pour .net, Rake pour Ruby...
 
 ## Principes de fonctionnement
 
-- Description des tâches dans un fichier `Gruntfile.js`
+- Description des tâches dans un fichier `gruntfile.js`
   - Pur Javascript
+  - Configuration-over-code
 - Un exécutable en ligne de commande : `grunt tâches...`
 - De nombreux plugins apportent des tâches pré-définies
   - Il n'y a plus qu'à configurer !
@@ -108,10 +109,10 @@ module.exports = function(grunt) {
   });
 
   // Importer un plugin installée avec NPM
-  grunt.loadNpmTasks('a-task-plugin'); 
+  grunt.loadNpmTasks('a-task-plugin');
 
   // Importer une tâche à partir d'un fichier
-  grunt.loadTasks('a-task-file.js'); 
+  grunt.loadTasks('a-task-file.js');
 
   // Déclarer une tâche composite
   grunt.registerTask('task', [/* une liste de tâche */]);
@@ -172,7 +173,7 @@ task: {
 Notes :
 - Une cible a un nom arbitraire, défini par l'auteur du Gruntfile. Donc ici
 `target1` pourrait être remplacé par n'importe quel mot.
-- Il faut se référer à la documentation de chaque tâche pour connaitre les 
+- Il faut se référer à la documentation de chaque tâche pour connaitre les
 options et paramètres disponibles.
 
 
@@ -188,7 +189,7 @@ grunt.initConfig({
     },
   },
 });
-  
+
 grunt.loadNpmTasks('grunt-contrib-copy');
 ```
 
@@ -216,7 +217,7 @@ sont exécutées après les autres.
 
 - Grunt n'embarque aucune tâche prédéfinie
 - Ces tâches sont disponibles sous forme de plugins
-  - [25](https://github.com/gruntjs/grunt-contrib) sont maintenus par l'équipe 
+  - [25](https://github.com/gruntjs/grunt-contrib) sont maintenus par l'équipe
   Grunt : `grunt-contrib-*`
   - Des dizaines d'autres par la communauté
 - Installation :
@@ -255,7 +256,7 @@ grunt.loadNpmTasks('grunt-contrib-jsdoc');
 ...
 ```
 
-- Solution : utiliser le 
+- Solution : utiliser le
 [plugin](https://github.com/sindresorhus/load-grunt-tasks) `load-grunt-tasks`
 ```javascript
 require('load-grunt-tasks')(grunt);
@@ -264,6 +265,46 @@ require('load-grunt-tasks')(grunt);
   suivant)
 
 
+
+## Gulp
+
+<figure>
+    <img src="assets/images/gulp-logo.png" alt="Gulp logo"  width="20%"/>
+    <figcaption>The streaming build system</figcaption>
+</figure>
+
+
+
+## Gulp
+
+- Challenger de Grunt
+- Description des tâches dans un fichier `gulpfile.js`
+  - Pur Javascript
+  - Code-over-configuration
+- Un exécutable en ligne de commande : `gulp tâches...`
+- Au lieu de configurer des tâches, on code des pipelines de transformation
+
+
+
+## Gulp
+
+```js
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var watch = require('gulp-watch');
+
+gulp.task('default', function() {
+  return gulp.src('sass/*.scss')
+    .pipe(watch())
+    .pipe(sass())
+    .pipe(gulp.dest('dist'));
+});
+```
+Notes :
+- gulp.src() : lecture des fichiers
+- .pipe(watch()) : seulement les fichiers modifiés
+- .pipe(sass()) : compilation SASS
+- .pipe(gulp.dest()) : écriture
 
 
 
