@@ -55,26 +55,6 @@ module.exports = function(grunt) {
         singleRun: true,
       },
     },
-    watch: {
-      options: {
-        livereload: true,
-      },
-      js: {
-        files: ['js/app/*.js'],
-        tasks: ['jshint:app', 'karma'],
-      },
-      tests: {
-        files: ['test/unit/*.js'],
-        tasks: ['karma:unit'],
-      },
-      html: {
-        files: ['index.html', 'view/*.html'],
-      },
-      gruntfile: {
-        files: ['Gruntfile.js'],
-        tasks: ['default'],
-      },
-    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -82,7 +62,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['jshint', 'karma', 'concat', 'uglify']);
 };

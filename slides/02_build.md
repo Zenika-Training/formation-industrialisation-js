@@ -1,4 +1,4 @@
-# Build</br>Génération du livrable
+# Build & Run
 
 <!-- .slide: data-background="zenika/images/title-background.png" -->
 
@@ -8,41 +8,34 @@
 
 <!-- .slide: class="toc" -->
 
-- **[Build et génération du livrable](#/1)**
-- [Gestion des dépendances](#/2)
-- [Tests et qualimétrie](#/3)
-- [Productivité](#/4)
-- [Intégration continue](#/5)
-- [Debugging et optimisation](#/6)
+- [Introduction à l'industrialisation](#/1)
+- **[Build & Run](#/2)**
+- [Optimisation du livrable](#/3)
+- [Gestion des dépendances](#/4)
+- [Tests et qualimétrie](#/5)
+- [Productivité](#/6)
+- [Intégration continue](#/7)
+- [Debugging et optimisation](#/8)
 
 
 
-## Pourquoi un build automatisé ?
+## Build
 
-- Plus rapide
-- Peut être reproduit à l'identique facilement
-- Soulage les développeurs de tâches rébarbatives
-
-&#8658; <!-- fat right arrow --> Gagne du temps et de l'argent
-
+- Le build est l'étape de la livraison où l'on construit un artéfact exécutable du programme, à partir du code source
 - Les outils de build sont omniprésents dans le monde Java avec Ant, Maven, et
 Gradle
+  - Quand on récupère un projet Maven, on sait `mvn package` produira un programme exécutable
 - De nombreuses plate-formes dispose de leur propre outil : make pour C et C++,
-MSBuild pour .net, Rake pour Ruby...
-- Et Javascript ?
+MSBuild pour .Net, Rake pour Ruby...
+- Et JavaScript ?
 
 
 
-## Pourquoi un build automatisé côté client ?
+## Un build JavaScript minimaliste
 
-- Concaténation
-- Minification
-- Compilation
-- Optimisation des images
-- Documentation
-- Tests
-- Déploiement
-- ...
+- JavaScript étant un langage interprété, il est moins dépendant d'un outil de build
+- Cependant, pour déployer l'application il faut au minimum copier des fichiers
+- Il faut aussi de quoi exécuter l'application
 
 
 
@@ -50,7 +43,7 @@ MSBuild pour .net, Rake pour Ruby...
 
 <figure>
     <img src="assets/images/grunt-logo.png" alt="Grunt logo"  width="40%"/>
-    <figcaption>The Javascript Task Runner</figcaption>
+    <figcaption>The JavaScript Task Runner</figcaption>
 </figure>
 
 
@@ -58,12 +51,12 @@ MSBuild pour .net, Rake pour Ruby...
 ## Principes de fonctionnement
 
 - Description des tâches dans un fichier `gruntfile.js`
-  - Pur Javascript
+  - Pur JavaScript
   - Configuration-over-code
 - Un exécutable en ligne de commande : `grunt tâches...`
 - De nombreux plugins apportent des tâches pré-définies
   - Il n'y a plus qu'à configurer !
-- Possibilité de définir à volonté de nouvelles tâches en Javascript
+- Possibilité de définir à volonté de nouvelles tâches en JavaScript
   - APIs pour manipuler les fichiers, le logging, le reporting...
 
 
@@ -88,13 +81,33 @@ le fonctionnement de NPM dans le chapitre suivant.
 
 
 
+## Run
+
+- Quand on récupére un projet, on veut pouvoir l'exécuter
+- Pour un projet client JavaScript, il faut un serveur HTTP
+- Voici un `gruntfile.js` qui fait cela
+
+```js
+module.exports = function(grunt) {
+  grunt.initConfig({
+    connect: { serve: { options: { keepalive:true } } }
+  });
+  grunt.loadNpmTasks('grunt-contrib-connect');
+};
+```
+
+- `grunt connect`
+- `http://localhost:8000`
+
+
+
 ## Concepts
 
 - Une *tâche* (task) est une opération automatisable paramétrée abstraite
-  - Exemple : minifier
+  - Exemple : copier
 - Une *cible* (target) est une instanciation d'une tâche sur un ensemble de
 fichier particulier
-  - Exemple : minifier le fichier `app.js` en `app.min.js`
+  - Exemple : copier le fichier `app.js` dans le dossier `dist`
   - Une cible peut surcharger les paramètres de sa tâche
 - Pour une tâche donnée, on peut créer autant de cibles que l'on veut
 
@@ -102,7 +115,7 @@ fichier particulier
 
 ## Syntaxe du Gruntfile
 
-```javascript
+```js
 module.exports = function(grunt) {
   grunt.initConfig({
     // Configurer des tâches et des cibles
@@ -133,7 +146,7 @@ module.exports = function(grunt) {
   - 0 ou 1 objet `options` qui valorise les options par défaut pour toutes les
   cibles
 
-```javascript
+```js
 grunt.initConfig({
   task: {
     options: {
@@ -159,7 +172,7 @@ options.
   pour cette cible seulement
   - des paramètres (en général des chemins source et destination)
 
-```javascript
+```js
 task: {
   target1: {
     options: {
@@ -178,9 +191,9 @@ options et paramètres disponibles.
 
 
 
-## Exemple réel
+## Exemple
 
-```javascript
+```js
 grunt.initConfig({
   copy: {  // tâche
     assets: {  // cible
@@ -209,102 +222,7 @@ Notes :
 `target`. C'est ce qu'est sensé montrer le bloc inférieur.
 - On pourrait aussi lancer `grunt copy:assets`.
 - Quand on appelle une tâche (et pas une cible) comme ici, toutes les cibles
-sont exécutées après les autres.
-
-
-
-## Plugins
-
-- Grunt n'embarque aucune tâche prédéfinie
-- Ces tâches sont disponibles sous forme de plugins
-  - [25](https://github.com/gruntjs/grunt-contrib) sont maintenus par l'équipe
-  Grunt : `grunt-contrib-*`
-  - Des dizaines d'autres par la communauté
-- Installation :
-  - `npm install <plugin>`
-  - `grunt.loadNpmTasks('<plugin>')`
-
-Notes :
-- Le préfixe `grunt-contrib` est réservé aux plugins maintenus par l'équipe
-Grunt.
-
-
-
-## Plugins <small>Exemples</small>
-
-- Concaténer : `grunt-contrib-concat`
-- Minifier : `grunt-contrib-uglify`
-- Compiler du Sass : `grunt-contrib-sass`
-- Optimiser des images : `grunt-contrib-imagemin`
-- Extraire de la documentation JSDoc : `grunt-jsdoc`
-- Lancer des tests Jasmine : `grunt-contrib-jasmine`
-- Déployer en FTP : `grunt-ftp-deploy`
-- Déployer sur Artifactory : `grunt-artifactory-artifact`
-- ...
-
-
-
-## Plugins
-
-- Charger tous les plugins peut devenir fastidieux
-```javascript
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-contrib-sass');
-grunt.loadNpmTasks('grunt-contrib-imagemin');
-grunt.loadNpmTasks('grunt-contrib-jsdoc');
-...
-```
-
-- Solution : utiliser le
-[plugin](https://github.com/sindresorhus/load-grunt-tasks) `load-grunt-tasks`
-```javascript
-require('load-grunt-tasks')(grunt);
-```
-  - Charge tous les plugins listés dans le `package.json` (voir chapitre
-  suivant)
-
-
-
-## Gulp
-
-<figure>
-    <img src="assets/images/gulp-logo.png" alt="Gulp logo"  width="20%"/>
-    <figcaption>The streaming build system</figcaption>
-</figure>
-
-
-
-## Gulp
-
-- Challenger de Grunt
-- Description des tâches dans un fichier `gulpfile.js`
-  - Pur Javascript
-  - Code-over-configuration
-- Un exécutable en ligne de commande : `gulp tâches...`
-- Au lieu de configurer des tâches, on code des pipelines de transformation
-
-
-
-## Gulp
-
-```js
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
-
-gulp.task('default', function() {
-  return gulp.src('sass/*.scss')
-    .pipe(watch())
-    .pipe(sass())
-    .pipe(gulp.dest('dist'));
-});
-```
-Notes :
-- gulp.src() : lecture des fichiers
-- .pipe(watch()) : seulement les fichiers modifiés
-- .pipe(sass()) : compilation SASS
-- .pipe(gulp.dest()) : écriture
+sont exécutées les unes après les autres.
 
 
 

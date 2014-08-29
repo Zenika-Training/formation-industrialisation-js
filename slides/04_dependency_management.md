@@ -8,12 +8,14 @@
 
 <!-- .slide: class="toc" -->
 
-- [Build et génération du livrable](#/1)
-- **[Gestion des dépendances](#/2)**
-- [Tests et qualimétrie](#/3)
-- [Productivité](#/4)
-- [Intégration continue](#/5)
-- [Debugging et optimisation](#/6)
+- [Introduction à l'industrialisation](#/1)
+- [Build & Run](#/2)
+- [Optimisation du livrable](#/3)
+- **[Gestion des dépendances](#/4)**
+- [Tests et qualimétrie](#/5)
+- [Productivité](#/6)
+- [Intégration continue](#/7)
+- [Debugging et optimisation](#/8)
 
 
 
@@ -236,5 +238,5 @@ browserify main.js -o bundle.js
 
 
 
-<!-- .slide: data-background="zenika/images/tp2.png" -->
+<!-- .slide: data-background="zenika/images/tp3.png" -->
 <!-- .slide: data-background-size="30%" -->

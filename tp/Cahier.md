@@ -22,7 +22,7 @@ bien dans le `PATH`, et l'ajouter si nécessaire.
 
 Sans connexion internet, utiliser la version fournie par le formateur dans le
 dossier `Node`. Décompresser l'archive `node-windows.zip` et ajouter le
-dossier résultant au `PATH`. Pour plus de faciliter, renommer `node-64.exe` 
+dossier résultant au `PATH`. Pour plus de faciliter, renommer `node-64.exe`
 (ou `node-32.exe` sur un système 32 bits) en `node.exe`.
 
 
@@ -45,26 +45,39 @@ ajouter le dossier `bin` au `PATH`.
 ### Serveur
 
 Pour tester l'application, il nous faut un serveur. Un serveur NodeJS est
-fourni dans le répertoire `Server/nodejs`. Pour le lancer, exécuter 
-`node server.js`. Il sert par défaut le dossier `TP0` mais il est possible 
+fourni dans le répertoire `Server/nodejs`. Pour le lancer, exécuter
+`node server.js`. Il sert par défaut le dossier `TP0` mais il est possible
 de modifier le répertoire servi dans `server.json`.
 
 
 ### Grunt
 
-Exécuter la commande `npm install -g grunt-cli` pour installer la commande 
+Exécuter la commande `npm install -g grunt-cli` pour installer la commande
 `grunt`. Pour chaque TP, installer Grunt localement pour le projet en se placer
 dans le répertoire de travail et exécuter `npm install grunt`.
 
 
 
-## TP 1 : Génération d'un livrable
+## TP 1 : Prise en main de Grunt
 
-Nous allons mettre en place un système de build automatisé pour l'application
-existante ZenContacts. Ce build se compose des étapes suivantes :
+- Se placer dans le répertoire de travail et installer les pré-requis.
+- Exécuter la commande `npm install grunt-contrib-connect grunt-contrib-compress` (nous verrons plus tard ce que cette commande signifie).
+- Exécuter `grunt connect`. Un serveur se lance.
+- Consulter l'adresse http://localhost:8000 avec un navigateur. Vous devriez avoir devant vous l'application ZenContacts, qui nous sert d'exemple pour ces TP.
+- Stopper Grunt (Ctrl+C)
+- Ajouter une tâche au gruntfile qui compresse l'ensemble des fichiers de l'application (sauf les tests) dans un fichier `dist.zip`. Voici un extrait de la documentation de la tâche compress:
+  - La cible doit contenir un objet `option` contenant un champ `archive` dont la valeur est le nom de l'archive.
+  - La cible doit contenir un champ `files` dont la valeur est un tableau d'objets. Chaque objet doit contenir un champ `src` et un champ `dest`. `src` est un tableau des chemins des fichiers à inclure dans l'archive. `dest` est le chemin que les fichiers auront à l'intérieur de l'archive.
+- Exécuter `grunt compress` pour tester votre tâche.
+
+
+
+## TP 2 : Génération d'un livrable
+
+Nous allons mettre en place un système de build automatisé pour ZenContacts. Ce build se compose des étapes suivantes :
 - Analyse syntaxique du Gruntfile
 - Analyse syntaxique du javascript
-- Concaténation de l'ensemble des fichiers javascript en seulement 2 
+- Concaténation de l'ensemble des fichiers javascript en seulement 2
 fichiers : un pour les librairies tierce, et un pour l'application elle-même
 - Minification des 2 fichiers précédemment créés
 
@@ -83,7 +96,7 @@ fichiers : un pour les librairies tierce, et un pour l'application elle-même
   - Si le rapport d'erreurs semble trop confu, installer `jshint-stylish` avec
   `npm` puis insérer `options: { reporter: require('jshint-stylish') }` dans la
   tâche `jshint` et relancer.
-- Il y a beaucoup d'erreurs `'angular' is not defined` ou 
+- Il y a beaucoup d'erreurs `'angular' is not defined` ou
 `'window' is not defined`. Ces erreurs sont des faux positifs puisque ces
 variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   - Créer un fichier `.jshintrc` dans le même dossier que le Gruntfile.
@@ -107,9 +120,9 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
   - L'erreur `Use the function form of "use strict"` est intéressante. Pour le
   moment chaque fichier de l'application commence par `'use strict';`, ce qui
   active le [mode strict](https://developer.mozilla.org/fr/docs/R%C3%A9f%C3%A9rence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions/Strict_mode).
-  Activer le mode strict en tête de script est une mauvaise pratique puisque 
+  Activer le mode strict en tête de script est une mauvaise pratique puisque
   cela rend le script impossible à concaténer avec un script non-strict.
-  La bonne pratique veut que chaque script soit englobé par une fonction 
+  La bonne pratique veut que chaque script soit englobé par une fonction
   auto-appelante (`(function(){}())`), qui elle est en mode strict. C'est cela
   que JSHint nous conseille de faire. Cependant, nous n'allons pas concaténer
   notre javascript applicatif avec du javascript tierce-partie, et tous les
@@ -122,11 +135,11 @@ variables globales sont bien définies. Nous devons indiqué cela à JSHint.
 
 - Installer `grunt-contrib-concat`.
 - Configurer la tâche `concat`.
-  - Une cible de `concat` est un object contenant un tableaux de 
+  - Une cible de `concat` est un object contenant un tableaux de
   *filesystem glob* source `src` et un chemin de destination `dest`.
-  - Attention la concaténation est effectué dans l'ordre du tableau donné à 
-  `src`. Il est important de respecter l'ordre de chargement des fichiers. 
-  Par exemple il est impératif que `angular.js` apparaisse avant 
+  - Attention la concaténation est effectué dans l'ordre du tableau donné à
+  `src`. Il est important de respecter l'ordre de chargement des fichiers.
+  Par exemple il est impératif que `angular.js` apparaisse avant
   `angular-animate.js`. Se référer à `index.html` pour trouver l'ordre précis.
   - Ajouter une cible `app` qui concatène les fichiers javascript applicatifs
   (dossier `js/app/`) et qui enregistre le résultat dans un dossier `target`.
@@ -156,32 +169,32 @@ un tableau de chemins à supprimer.
 
 
 
-## TP2 : Gestion des dépendances
+## TP3 : Gestion des dépendances
 
 ### Dépendances de développement avec NPM
 
 Ecrire un fichier `package.json` qui liste les dépendances du build créé
-pendant le TP1, afin que tout puisse être installé avec un simple 
+pendant le TP1, afin que tout puisse être installé avec un simple
 `npm install`.
 
 
 ### Dépendances côté client avec Bower
 
 - Installer Bower à l'aide de NPM.
-- Utiliser Bower pour télécharger toutes les dépendances de l'application 
-ainsi qu'enregistrer la liste des dépendances dans un `bower.json` : 
-jQuery, Bootstrap, Markdown, Fuse, Angular, Angular Resource, Angular Route, 
+- Utiliser Bower pour télécharger toutes les dépendances de l'application
+ainsi qu'enregistrer la liste des dépendances dans un `bower.json` :
+jQuery, Bootstrap, Markdown, Fuse, Angular, Angular Resource, Angular Route,
 Angular Cookies, et Angular UI Utils.
   - En cas d'erreur `failed to execute git ls-remote`, exécuter la commande
   `git config --global url."https://".insteadof git://` puis réessayer.
-- Pour tester le `bower.json`, supprimer `bower_components` puis exécuter 
+- Pour tester le `bower.json`, supprimer `bower_components` puis exécuter
 `bower install`. Vérifier que toutes les dépendances sont présentes.
 - Adapter la tâche `concat` du Gruntfile pour qu'elle utilise les fichiers
 téléchargés par Bower.
 
 
 
-## TP3 : Tests
+## TP4 : Tests
 
 Comme nous avons déjà rédigé des tests lors de la formation AngularJS, nous
 allons ici nous contenter d'intégrer l'exécution de ceux-ci à Grunt.
@@ -194,7 +207,7 @@ qu'elle charge les fichiers tierce-partie depuis Bower.
 - Configurer la tâche `karma`.
   - Les cibles de la tâche `karma` sont des objets contenant au moins
   l'attribut `configFile` égal à un chemin vers un fichier de configuration
-  Karma. Afin que Karma ne bloque pas le build, il faut ajouter l'attribut 
+  Karma. Afin que Karma ne bloque pas le build, il faut ajouter l'attribut
   `singleRun` et lle valoriser à `true`.
 - Exécuter la tâche.
 
@@ -210,7 +223,7 @@ headless PhantomJS.
 - Ajouter la tâche `karma` à la tâche par défaut.
 
 
-## TP4 : Rechargement à chaud
+## TP5 : Rechargement à chaud
 
 Pour ce TP nous allons mettre en place LiveReload.
 

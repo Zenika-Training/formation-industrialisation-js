@@ -8,12 +8,14 @@
 
 <!-- .slide: class="toc" -->
 
-- [Build et génération du livrable](#/1)
-- [Gestion des dépendances](#/2)
-- **[Tests et qualimétrie](#/3)**
-- [Productivité](#/4)
-- [Intégration continue](#/5)
-- [Debugging et optimisation](#/6)
+- [Introduction à l'industrialisation](#/1)
+- [Build & Run](#/2)
+- [Optimisation du livrable](#/3)
+- [Gestion des dépendances](#/4)
+- **[Tests et qualimétrie](#/5)**
+- [Productivité](#/6)
+- [Intégration continue](#/7)
+- [Debugging et optimisation](#/8)
 
 
 
@@ -285,7 +287,7 @@ describe('a parrot', function() {
   - Ouvrir la page dans le navigateur de référence
   - Une telle page est fourni avec Jasmine, il faut simplement modifier les
   `script[src]`
-- Dans Node, à l'aide du projet `jasmine-node` (Jasmine 1.3)
+- Dans Node, à l'aide du projet `jasmine-node`
   - `npm install -g jasmine-node`
   - `jasmine-node <fichiers/dossiers de tests>`
   - Intégrable avec Grunt
@@ -396,10 +398,41 @@ width="90%" class="with-border"/>
 
 
 
+## Webdriver I/O
+
+<figure>
+  <img src="assets/images/webdriverio-logo.png" alt="Webdriver I/O logo"
+width="30%" style="margin-top: 10%;"/>
+  <figcaption>Selenium 2.0 bindings for NodeJS</figcaption>
+</figure>
+
+
+
+## Webdriver I/O
+
+- http://www.webdriver.io/
+- API fluent JavaScript pour piloter Selenium
+
+```js
+webdriverio
+    .remote(options)
+    .init()
+    .url('http://www.google.com')
+    .setValue('input[name="q"]', 'randomness\n')
+    .waitFor('div.rc a', 5000)
+    .click('div.rc a')
+    .title(function(err, res) {
+        console.log('Title was: ' + res.value);
+    })
+    .end();
+```
+
+
+
 <!-- .slide: data-background="zenika/images/questions.png" -->
 <!-- .slide: data-background-size="30%" -->
 
 
 
-<!-- .slide: data-background="zenika/images/tp3.png" -->
+<!-- .slide: data-background="zenika/images/tp4.png" -->
 <!-- .slide: data-background-size="30%" -->

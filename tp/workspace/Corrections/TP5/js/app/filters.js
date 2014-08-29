@@ -14,7 +14,7 @@ zenContactFilters.filter('fuzzyFilter', function () {
     });
     
     return fuse.search(search);
-  }
+  };
 });
 
 

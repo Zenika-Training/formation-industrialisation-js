@@ -3,11 +3,11 @@ module.exports = function(config){
     basePath : '../',
 
     files : [
-        'bower_components/angular/angular.js',
-        'bower_components/angular-cookies/angular-cookies.js',
-        'bower_components/angular-resource/angular-resource.js',
-        'bower_components/angular-route/angular-route.js',
-        'bower_components/angular-ui-utils/ui-utils.js',
+        'js/angular/angular.js',
+        'js/angular/angular-resource.js',
+        'js/angular/angular-route.js',
+        'js/angular/angular-cookies.js',
+        'js/angular-ui/unique.js',
         'test/lib/angular/angular-mocks.js',
         'js/app/**/*.js',
         'test/unit/**/*.js'
@@ -17,11 +17,12 @@ module.exports = function(config){
 
     frameworks: ['jasmine'],
 
-    browsers : ['PhantomJS'],
+    browsers : ['Chrome', 'Firefox'],
 
     plugins : [
-        'karma-phantomjs-launcher',
-        'karma-jasmine'       
+        'karma-chrome-launcher',
+        'karma-firefox-launcher',
+        'karma-jasmine'
     ],
 
 })}
