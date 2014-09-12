@@ -21,14 +21,29 @@
 
 ## Pourquoi un build automatisé côté client ?
 
-- Concaténation
-- Minification
-- Compilation
+- Une application web est vouée à être transmise sur le réseau
+- Penser aux connexions réseaux lentes
+- Problèmatique d'optimisation du traffic
+- Réduire le nombre de fichiers
+- Réduire la taille des fichiers
+- Exemple dans l'application des TP : 14 fichiers JavaScript, > 1 Mo
+
+Notes :
+- Réduire le nombre de fichiers réduit le nombre de connexions TCP, ce qui augmente les performances car chaque connexion a une période de "chauffe" avant d'atteindre le débit maximum ("TCP ramp up").
+
+
+
+## Pourquoi un build automatisé côté client ?
+
+- *Concaténation* pour réduire le nombre de fichiers
+- *Minification* pour réduire la taille
+- Compression
 - Optimisation des images
-- Documentation
-- Tests
-- Déploiement
-- ...
+- Mais aussi
+  - Compilation / Transformation de sources
+  - Génération de documentation
+  - Exécution des tests
+  - ...
 
 
 
