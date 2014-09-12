@@ -60,6 +60,8 @@ dans le répertoire de travail et exécuter `npm install grunt`.
 
 ## TP 1 : Prise en main de Grunt
 
+Nous allons voir comment utiliser Grunt pour exécuter notre application web, et pour créer une archive de livraison.
+
 - Se placer dans le répertoire de travail et installer les pré-requis.
 - Exécuter la commande `npm install grunt-contrib-connect grunt-contrib-compress` (nous verrons plus tard ce que cette commande signifie).
 - Exécuter `grunt connect`. Un serveur se lance.

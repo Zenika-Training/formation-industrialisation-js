@@ -1,4 +1,4 @@
-# Industrialisation Web & Javascript
+# Industrialisation Web & JavaScript
 
 <!-- .slide: data-background="zenika/images/title-background.png" -->
 

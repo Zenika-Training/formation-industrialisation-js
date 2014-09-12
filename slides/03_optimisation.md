@@ -47,7 +47,7 @@ Notes :
 
 
 
-## Plugins
+## Plugins Grunt
 
 - Grunt n'embarque aucune tâche prédéfinie
 - Ces tâches sont disponibles sous forme de plugins
@@ -64,7 +64,7 @@ Grunt.
 
 
 
-## Plugins <small>Exemples</small>
+## Plugins Grunt <small>Exemples</small>
 
 - Concaténer : `grunt-contrib-concat`
 - Minifier : `grunt-contrib-uglify`
