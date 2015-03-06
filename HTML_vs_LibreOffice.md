@@ -55,5 +55,6 @@ Dans tous les cas, les formations HTML gagne haut la main en terme d'interopéra
 
 # Les petits +
 
+- [Haroopad](http://pad.haroopress.com/user.html) est un editeur multi-OS pour le markdown
 - [Sublime Text Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended) permet d'avoir de la coloration syntaxique pour le markdown ainsi que d'autres améliorations
 - [Sublime Text Markdown Extended](https://github.com/jonschlinkert/sublime-markdown-extended) permet la coloration syntaxique du code à l'intérieur des bloc de code intégré au markdown
