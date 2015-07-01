@@ -187,9 +187,9 @@ sut le Chrome Web Store
 ## CoffeeScript
 
 - http://coffeescript.org/
-- Amélioration syntaxique du Javascript
+- Amélioration syntaxique du JavaScript
 - Accès à tout l'écosystème JS
-- Se compile en du Javascript lisible
+- Se compile en du JavaScript lisible
 
 
 
@@ -271,15 +271,15 @@ x * x for x in [0..10]
   - `and`, `or` et `not` au lieu de `&&`, `||` et `!`
   - `unless` plutôt que `if not`
   - `==` et `!=` sont traduit en `===` et `!==`
-  - Possible d'intégrer du Javascript entre backticks
+  - Possible d'intégrer du JavaScript entre backticks
 
 
 
 ## TypeScript
 
 - http://www.typescriptlang.org
-- Un Javascript avec typage optionnel
-- Sur-ensemble de Javascript
+- Un JavaScript avec typage optionnel
+- Sur-ensemble de JavaScript
   - Tout code Javscript est un code TypeScript
 
 
@@ -327,7 +327,7 @@ var greeter = new Greeter("world");
 
 ## Dart
 
-- Nouveau langage complet developpé par Google
+- Nouveau langage developpé par Google
 - Client ou serveur
 - Compilation vers JavaScript
 - Outillage
@@ -472,6 +472,52 @@ Notes :
   border-color: green;
 }
 ```
+
+
+
+## ECMAScript 6 : le futur de JavaScript
+
+- A.k.a. JavaScript 2.0
+- JavaScript appartient à Mozilla
+- La spécification ouverte est nommée ECMAScript
+- La prochaine et sixième version est prévue pour 2015
+- Beaucoup de nouvelles fonctionnalités
+- Certaines déjà disponibles dans les navigateurs et Node.js
+- D'autres accessible via une compilation vers ECMAScript 5
+
+Notes :
+- Compilateur ES6 vers ES5 : Traceur de Google
+
+
+
+## ECMAScript 6
+
+- Classes
+- Modules
+- *Itération des valeurs avec `for (x of xs)`*
+- *Variables locales à un bloc*
+- *Constantes*
+- Déstructuration
+- Valeur par défaut pour les paramètres
+- Collecte des paramètres supplémentaires dans un tableau
+- Passage d'un tableau en place des paramètres d'une fonction
+
+Notes :
+- en rouge = disponibles dans Firefox et Chrome
+- https://github.com/lukehoban/es6features pour les détails sur les features et des exemples
+
+
+
+## ECMAScript 6
+
+- *Fonctions sans contexte*
+- Interpolation des chaines de caractères
+- *Map et Set*
+- *Promesses*
+- *Générateurs (a.k.a. `yield`)*
+- Raccourcis syntaxiques divers
+- *Enrichissement de l'API standard*
+- ...
 
 
 
