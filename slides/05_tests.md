@@ -55,7 +55,7 @@ données.
 - Recherche les erreurs
 - Fait des remarques de styles
 - Complètement configurable
-- Installable avec NPM
+- Installable avec npm
   - `npm install -g jshint`
   - `jshint <fichier.js>`
 

@@ -63,7 +63,7 @@ MSBuild pour .Net, Rake pour Ruby...
 
 ## Installation
 
-- Pré-requis : [NodeJS](http://nodejs.org) et [NPM](http://npmjs.org)
+- Pré-requis : [NodeJS](http://nodejs.org) et [npm](http://npmjs.org)
 - Installer la ligne de commande : `npm install -g grunt-cli`
   - La commande `grunt` devient alors accessible partout
 - Grunt lui-même s'installe ensuite une fois par projet
@@ -74,10 +74,10 @@ MSBuild pour .Net, Rake pour Ruby...
 
 Notes :
 - A ce moment de la formation, on a pas encore vu la différence entre
-les installations globales (`-g`) et locales ("par projet") de NPM. Il est
+les installations globales (`-g`) et locales ("par projet") de npm. Il est
 possible d'expliquer rapidement que "par projet" signifie que Grunt est
 installé dans un sous-dossier du projet, et que l'on verra plus précisément
-le fonctionnement de NPM dans le chapitre suivant.
+le fonctionnement de npm dans le chapitre suivant.
 
 
 
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
     // Configurer des tâches et des cibles
   });
 
-  // Importer un plugin installée avec NPM
+  // Importer un plugin installée avec npm
   grunt.loadNpmTasks('a-task-plugin');
 
   // Importer une tâche à partir d'un fichier
