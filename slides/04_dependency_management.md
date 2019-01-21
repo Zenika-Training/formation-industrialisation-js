@@ -29,16 +29,16 @@
 
 
 
-## NPM
+## npm
 
 <figure style="margin-top: 20%">
-  <img src="assets/images/npm-logo.png" alt="NPM logo"  width="40%"/>
+  <img src="assets/images/npm-logo.png" alt="npm logo"  width="40%"/>
   <figcaption>The Node Package Manager</figcaption>
 </figure>
 
 
 
-## NPM <small>Node Package Manager</small>
+## npm <small>Node Package Manager</small>
 
 - http://npmjs.org
 - ~64k packages pour la plate-forme Node
@@ -121,7 +121,7 @@ plus récente que celle installée
 
 ## Côté client ?
 
-- Rappel : NPM installe des packages pour NodeJS, pas des librairies pour le
+- Rappel : npm installe des packages pour NodeJS, pas des librairies pour le
 développement dans le navigateur
 - Il faut donc un autre programme pour cela...
 
@@ -221,7 +221,7 @@ var module = require('module')
 module.fonction(1, 2, 3)
 ```
 
-- Les modules tiers sont installables avec NPM
+- Les modules tiers sont installables avec npm
 - On compile ensuite le tout avec la commande `browserify`
 
 ```

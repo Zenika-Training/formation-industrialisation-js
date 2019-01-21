@@ -9,12 +9,12 @@ Se rendre sur http://git-scm.com/ et télécharger la dernière version de Git.
 S'assurer qu'après l'installation, la commande git est disponible. Sinon,
 ajouter le dossier `bin` de Git au `PATH`.
 
-### NodeJS et NPM
+### NodeJS et npm
 
 #### Windows
 
 Si une connexion internet est disponible, se rendre sur http://nodejs.org et
-télécharger la dernière version de NodeJS. NPM est embarqué. Après
+télécharger la dernière version de NodeJS. npm est embarqué. Après
 l'installation, lancer une invite de commande et exécuter `node --version` pour
 vérifier que la commande `node` est disponible. Faire de même pour `npm`. En
 cas de problème, vérifier que le dossier d'installation de NodeJS se trouve
@@ -29,7 +29,7 @@ dossier résultant au `PATH`. Pour plus de faciliter, renommer `node-64.exe`
 #### Linux
 
 Si une connexion internet est disponible, se rendre sur http://nodejs.org et
-télécharger la dernière version de NodeJS. NPM est embarqué. Décompresser,
+télécharger la dernière version de NodeJS. npm est embarqué. Décompresser,
 l'archive et ajouter le dossier `bin` au `PATH`.
 
 Sur un système Debian il est possible d'utiliser APT, mais les versions sont un
@@ -173,7 +173,7 @@ un tableau de chemins à supprimer.
 
 ## TP3 : Gestion des dépendances
 
-### Dépendances de développement avec NPM
+### Dépendances de développement avec npm
 
 Ecrire un fichier `package.json` qui liste les dépendances du build créé
 pendant le TP1, afin que tout puisse être installé avec un simple
@@ -182,7 +182,7 @@ pendant le TP1, afin que tout puisse être installé avec un simple
 
 ### Dépendances côté client avec Bower
 
-- Installer Bower à l'aide de NPM.
+- Installer Bower à l'aide de npm.
 - Utiliser Bower pour télécharger toutes les dépendances de l'application
 ainsi qu'enregistrer la liste des dépendances dans un `bower.json` :
 jQuery, Bootstrap, Markdown, Fuse, Angular, Angular Resource, Angular Route,
@@ -217,7 +217,7 @@ L'ouverture des navigateurs par Karma peut devenir gênante sur un poste de
 développement. Pour l'éviter, le plus simple est d'utiliser le navigateur
 headless PhantomJS.
 
-- Installer PhantomJS à l'aide de NPM.
+- Installer PhantomJS à l'aide de npm.
 - Installer le plugin PhantomJS pour Karma (son nom est
 `karma-phantomjs-launcher`).
 - Modifier la configuration Karma.
