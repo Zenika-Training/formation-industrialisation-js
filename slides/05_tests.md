@@ -287,7 +287,7 @@ describe('a parrot', function() {
   - Ouvrir la page dans le navigateur de référence
   - Une telle page est fourni avec Jasmine, il faut simplement modifier les
   `script[src]`
-- Dans Node, à l'aide du projet `jasmine-node`
+- Dans Node.js, à l'aide du projet `jasmine-node`
   - `npm install -g jasmine-node`
   - `jasmine-node <fichiers/dossiers de tests>`
   - Intégrable avec Grunt
@@ -298,12 +298,12 @@ describe('a parrot', function() {
 
 - [Mocha](http://visionmedia.github.io/mocha/)
   - API très proche de Jasmine
-  - Conçu pour Node mais supporte les navigateurs
+  - Conçu pour Node.js mais supporte les navigateurs
   - Plus flexible mais plus difficile à appréhender (pas d'API d'assert ni de
   mock embarquées)
 - [QUnit](https://qunitjs.com/)
   - API standard xUnit
-  - Conçu pour les navigateurs, peut fonctionner sous Node avec à l'aide de
+  - Conçu pour les navigateurs, peut fonctionner sous Node.js avec à l'aide de
   projets tierce-partie
 
 
@@ -323,7 +323,7 @@ describe('a parrot', function() {
 
 ## Karma
 
-- Module Node créé par l'équipe AngularJS
+- Module Node.js créé par l'équipe AngularJS
 - Il exécute atuomatiquement les tests
   - dans plusieurs navigateurs
   - à chaque modification du code

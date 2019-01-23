@@ -41,7 +41,7 @@
 ## npm <small>Node Package Manager</small>
 
 - http://npmjs.org
-- ~64k packages pour la plate-forme Node
+- ~64k packages pour la plate-forme Node.js
   - pas pour le Javascript côté client
   - mais utile pour les outils de développement (Grunt...)
 - Description des dépendances dans un fichier `package.json`
