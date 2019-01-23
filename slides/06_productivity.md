@@ -486,7 +486,7 @@ Notes :
 - D'autres accessible via une compilation vers ECMAScript 5
 
 Notes :
-- Compilateur ES6 vers ES5 : Traceur de Google
+- Compilateur ES2015 vers ES5 : Traceur de Google
 
 
 
